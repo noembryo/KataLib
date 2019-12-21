@@ -65,7 +65,8 @@ and more...
 * ".flac" - Free Lossless Audio Codec (lossless)
 * ".wav" - Waveform Audio (lossless)
 
-
+___
+#### Screenshots
 <p align="center">
   <a href="https://raw.githubusercontent.com/noembryo/KataLib/master/images/katalib_screen1.png">
     <img src="https://raw.githubusercontent.com/noembryo/KataLib/master/images/katalib_screen1.png" height="200"></a>
@@ -91,8 +92,7 @@ and more...
     <img src="https://raw.githubusercontent.com/noembryo/KataLib/master/images/katalib_screen9.png" height="200"></a>
 </p>
 
-
-
+___
 
 ## Downloads
 Check the latest release on the [Downloads Page][ReleaseLink].  
