@@ -8,29 +8,29 @@
 ### You can use it as:
 
 * **Player**  
-Play any audio file or YouTube link
-DJ mode with auto or manual crossfades between tracks
-Play the YouTube links in a uniform level
+Play any audio file or YouTube link  
+DJ mode with auto or manual crossfades between tracks  
+Play the YouTube links in a uniform level  
 Load and save WinAmp playlists
 
 * **YouTube downloader**  
-Download any YouTube link or playlists
-Use any resolution or stream quality
+Download any YouTube link or playlists  
+Use any resolution or stream quality  
 Automatically collect YouTube links that you copy in your browser
 
 * **Converter**  
-Convert between many different audio formats
-Auto Level/Trim output
-Convert YouTube video links to any type of audio files
+Convert between many different audio formats  
+Auto Level/Trim output  
+Convert YouTube video links to any type of audio files  
 
 * **Librarian**  
-Organize and search all your music/audio files
-Download Cover images from the internet or apply your own
+Organize and search all your music/audio files  
+Download Cover images from the internet or apply your own  
 Use custom tags to make searching easier
 
 * **MetaData editor**  
-View and edit metadata information (IDv2 tags)
-Download missing info from the MusicBrainz db
+View and edit metadata information (IDv2 tags)  
+Download missing info from the MusicBrainz db  
 Change the metadata in many files in one go (Batch mode)
  
 * **Easy to use drag & drop interface**  
@@ -101,3 +101,5 @@ Read the version history at [App's Page](http://www.noembryo.com/apps.php?katali
 #
 
 [ReleaseLink]:https://GitHub.com/noembryo/KataLib/releases/
+
+
