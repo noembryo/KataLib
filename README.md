@@ -33,6 +33,7 @@ View and edit metadata information (IDv2 tags)
 Download missing info from the MusicBrainz db  
 Change the metadata in many files in one go (Batch mode)
  
+* **Normal or Compact View**  
 * **Easy to use drag & drop interface**  
 and more...
 
