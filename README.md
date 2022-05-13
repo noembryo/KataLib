@@ -94,6 +94,12 @@ ___
 </p>
 
 ___
+## Compatibility
+### Windows XP and up.  
+The FFmpeg version that KataLib is using, does not support XP.  
+We can solve this by specifying an XP compatible `FFmpeg.exe` in "Preferences".  
+[Some XP compatible builds can be found here][FFmpeg4XP].
+___
 
 ## Downloads
 Check the latest release on the [Downloads Page][ReleaseLink].  
@@ -102,5 +108,6 @@ Read the version history at [App's Page](http://www.noembryo.com/apps.php?katali
 #
 
 [ReleaseLink]:https://GitHub.com/noembryo/KataLib/releases/
+[FFmpeg4XP]:https://rwijnsma.home.xs4all.nl/files/ffmpeg/?C=M;O=D/
 
 
