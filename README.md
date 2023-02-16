@@ -104,7 +104,7 @@ To use it, you also need an XP compatible `FFmpeg.exe` in "Preferences".
 [Some XP compatible builds can be found here][FFmpeg4XP].
 
 ### Windows 7
-KataLib can't start if Microsoft Visual C++ 14.0 is not installed.  
+KataLib can't start if Microsoft Visual C++ 14.0 is not installed. 
 [Get it here][C++2014].  
 The Windows 7 32bit version also needs the KB2533623 update thats is included in [KB3063858][w7upd] ([direct link][w7upd2]).
 ___
