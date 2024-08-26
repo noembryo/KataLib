@@ -43,6 +43,7 @@ and more...
 * ".m4a" - MPEG-4 Part 14 (audio only) can contain AAC (lossy) or ALAC (lossless) stream
 * ".ape" - Monkey's Audio (lossless)
 * ".ogg" - Ogg/Vorbis (lossy)
+* ".oga" - Ogg/Opus Audio (lossy)
 * ".opus" - Opus Interactive Audio Codec (lossy)
 * ".flac" - Free Lossless Audio Codec (lossless)
 * ".ac3" - Dolby AC-3 (lossy)
@@ -56,9 +57,13 @@ and more...
 * ".flv" - Flash video (extracts the aac audio stream)
 * ".wv" - WavPack (lossless)
 * ".mpc" - Musepack AKA MPEGplus (lossy)
+* ".mp2" - MPEG-1 Audio Layer II (audio only) (lossy)
+* ".mpga" - MPEG-1 Audio Layer III (audio only) (lossy)
+* ".mpeg" - MPEG-1/2 (extracts the MPEG-1 Audio Layer II audio stream) (lossy)
 * ".webm" - WebM - can contain Ogg or Opus (lossy)
 * ".dts" - DTS - Digital Theater Systems
 * ".m4b" - MPEG-4 Part 14 (audio only) (lossy) used for audio books
+* ".dfs" - Direct Stream Digital file (lossless) (convert-only)
 
 ## Output Formats: 
 * ".mp3" - MPEG Audio Stream, Layer III (lossy)
@@ -104,8 +109,7 @@ To use it, you also need an XP compatible `FFmpeg.exe` in "Preferences".
 [Some XP compatible builds can be found here][FFmpeg4XP].
 
 ### Windows 7
-KataLib can't start if Microsoft Visual C++ 14.0 is not installed. 
-[Get it here][C++2014].  
+KataLib can't start if Microsoft Visual C++ 14.0 is not installed. [Get it here][C++2014].  
 The Windows 7 32bit version also needs the KB2533623 update thats is included in [KB3063858][w7upd] ([direct link][w7upd2]).
 ___
 
@@ -121,3 +125,5 @@ Read the version history at [App's Page](http://www.noembryo.com/apps.php?katali
 [C++2014]:https://aka.ms/vs/17/release/vc_redist.x86.exe
 [w7upd]:https://www.microsoft.com/en-us/download/details.aspx?id=47409
 [w7upd2]:https://download.microsoft.com/download/C/9/6/C96CD606-3E05-4E1C-B201-51211AE80B1E/Windows6.1-KB3063858-x86.msu
+
+
