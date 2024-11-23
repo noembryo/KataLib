@@ -1,4 +1,44 @@
-# Overview
+<!-- TOC -->
+* [User Guide](#user-guide)
+  * [Overview](#overview)
+  * [The ToolBar](#the-toolbar)
+* [Detailed info](#detailed-info)
+  * [Playlist](#playlist)
+  * [Library Collections](#library-collections)
+  * [Library Tracks](#library-tracks)
+  * [Convert dialog](#convert-dialog)
+  * [Edit Metadata](#edit-metadata)
+  * [Multi Edit Metadata](#multi-edit-metadata)
+  * [Filter](#filter)
+    * [Filter Library Collections](#filter-library-collections)
+    * [Filter Library Tracks](#filter-library-tracks)
+  * [Library Folders button](#library-folders-button)
+  * [Preferences](#preferences)
+    * [• General](#-general)
+    * [• View](#-view)
+    * [• YouTube Settings](#-youtube-settings)
+    * [• Paths](#-paths)
+    * [• Advanced](#-advanced)
+  * [About button](#about-button)
+* [Context Menus](#context-menus)
+* [Shortcuts](#shortcuts)
+  * [Global Shortcuts](#global-shortcuts)
+* [Extra things to include somewhere](#extra-things-to-include-somewhere)
+  * [Player Find](#player-find)
+  * [DJ stuff](#dj-stuff)
+<!-- TOC -->
+
+# User Guide
+
+
+#### 2do
+
+- [ ] Show Collection tracks?
+- [ ] Playlist detailed usage
+- [ ] Transport usage and screenshots
+- [ ] Compact View specifics
+
+## Overview
 
 **KataLib** is a program that can play and organize music (or media) files.  
   
@@ -19,8 +59,8 @@ The panels can be toggled on/off, by the **Layout** menu on the bottom right of 
 
 The size, position and configuration of the program's window can be saved as a "Layout", and can be easily re-applied from the **User Layouts** sub-menu of the **Layout** menu, or from the menu of the **Preferences** toolbar button.  
 
-There is also an alternative view of the app, called the **Compact View**...
-![CompactViewTrans.png](images/CompactViewTrans.png)
+There is also an alternative view of the app, called the **Compact View**...  
+![CompactViewTrans.png](images/CompactViewTrans.png)  
 ...that consists of a main player window and the **Playlist** and **Properties** floating windows, that can be turned on/off, to conserve screen space.
 
 While using KOHighlights, keep in mind that most of the user interface controls have a Tooltip, that briefly explains what they do.  
@@ -29,80 +69,70 @@ ___
 
 Generally, KataLib can be seen as three programs in one: A Player, a Converter and a Librarian.
 
-### • A Player
+- **A Player**
 
-As a Player, it can play any music or video file that we drop on it from the library or from the file explorer. It can load Winamp playlists and can also download YouTube links and/or playlists and play them.  
-By selecting one or more tracks we can do many things like: edit metadata, copy, move, convert or even download the video file itself (if it's a YouTube link track).  
+    As a Player, it can play any music or video file that we drop on it from the library or from the file explorer. It can load Winamp playlists and can also download YouTube links and/or playlists and play them.  
+    By selecting one or more tracks we can do many things like: edit metadata, copy, move, convert or even download the video file itself (if it's a YouTube link track).  
 
-### • A Librarian
+- **A Librarian**
 
-As a Librarian, it uses a database to store and present two distinct types of data.  
-- The [Library Collections](#library-collections)  
-These are virtual playlists of local media files and/or YouTube links.  
-- The [Library Tracks](#library-tracks)  
-The properties of local media files (tracks).  
+    As a Librarian, it uses a database to store and present two distinct types of data.  
+  - The [Library Collections](#library-collections)  
+    These are virtual playlists of local media files and/or YouTube links.  
+  - The [Library Tracks](#library-tracks)  
+    The properties of local media files (tracks).  
 
-### • A Converter
+- **A Converter**  
 
-As a converter, it can [convert](#convert-dialog)
-from these types of audio files...
+    As a converter, it can [convert](#convert-dialog)
+    from these types of audio files...
+    
+    - ".mp3" - MPEG Audio Stream, Layer III (lossy)
+    - ".aac" - Advanced Audio Coding (lossy)
+    - ".m4a" - MPEG-4 Part 14 (audio only) can contain AAC (lossy) or ALAC (lossless) stream
+    - ".ape" - Monkey's Audio (lossless)
+    - ".ogg" - Ogg/Vorbis (lossy)
+    - ".oga" - Ogg/Opus Audio (lossy)
+    - ".opus" - Opus Interactive Audio Codec (lossy)
+    - ".flac" - Free Lossless Audio Codec (lossless)
+    - ".ac3" - Dolby AC-3 (lossy)
+    - ".wma" - Windows Media Audio (lossy)
+    - ".wav" - Waveform Audio (lossless)
+    - ".aif" - Audio Interchange File Format (lossless)
+    - ".mp4" - MPEG-4 Part 14 multimedia (extracts the aac audio stream)
+    - ".mkv" - Matroska Multimedia Container (extracts the audio stream)
+    - ".avi" - Audio Video Interleaved Container (extracts the audio stream)
+    - ".mov" - QuickTime File Format (extracts the aac audio stream)
+    - ".flv" - Flash video (extracts the aac audio stream)
+    - ".wv" - WavPack (lossless)
+    - ".mpc" - Musepack AKA MPEGplus (lossy)
+    - ".mp2" - MPEG-1 Audio Layer II (audio only) (lossy)
+    - ".mpga" - MPEG-1 Audio Layer III (audio only) (lossy)
+    - ".mpeg" - MPEG-1/2 (extracts the MPEG-1 Audio Layer II audio stream) (lossy)
+    - ".webm" - WebM - can contain Ogg or Opus (lossy)
+    - ".dts" - DTS - Digital Theater Systems
+    - ".m4b" - MPEG-4 Part 14 (audio only) (lossy) used for audiobooks
+    - ".dfs" - Direct Stream Digital file (lossless) (convert-only)
+    
+     
+    
+    ... to these types of audio files  
+    
+    -   ".mp3" - MPEG Audio Stream, Layer III (lossy)
+    -   ".m4a" - MPEG-4 Part 14 (audio only) containing AAC (lossy) stream
+    -   ".aac" - Advanced Audio Coding AAC (lossy)
+    -   ".ogg" - Ogg/Vorbis (lossy)
+    -   ".opus" - Opus Interactive Audio Codec (lossy)
+    -   ".flac" - Free Lossless Audio Codec (lossless)
+    -   ".wav" - Waveform Audio (lossless)
 
-[//]: # (<details>)
-
-[//]: # (<summary>from these types of audio files...</summary>)
-
-- ".mp3" - MPEG Audio Stream, Layer III (lossy)
-- ".aac" - Advanced Audio Coding (lossy)
-- ".m4a" - MPEG-4 Part 14 (audio only) can contain AAC (lossy) or ALAC (lossless) stream
-- ".ape" - Monkey's Audio (lossless)
-- ".ogg" - Ogg/Vorbis (lossy)
-- ".oga" - Ogg/Opus Audio (lossy)
-- ".opus" - Opus Interactive Audio Codec (lossy)
-- ".flac" - Free Lossless Audio Codec (lossless)
-- ".ac3" - Dolby AC-3 (lossy)
-- ".wma" - Windows Media Audio (lossy)
-- ".wav" - Waveform Audio (lossless)
-- ".aif" - Audio Interchange File Format (lossless)
-- ".mp4" - MPEG-4 Part 14 multimedia (extracts the aac audio stream)
-- ".mkv" - Matroska Multimedia Container (extracts the audio stream)
-- ".avi" - Audio Video Interleaved Container (extracts the audio stream)
-- ".mov" - QuickTime File Format (extracts the aac audio stream)
-- ".flv" - Flash video (extracts the aac audio stream)
-- ".wv" - WavPack (lossless)
-- ".mpc" - Musepack AKA MPEGplus (lossy)
-- ".mp2" - MPEG-1 Audio Layer II (audio only) (lossy)
-- ".mpga" - MPEG-1 Audio Layer III (audio only) (lossy)
-- ".mpeg" - MPEG-1/2 (extracts the MPEG-1 Audio Layer II audio stream) (lossy)
-- ".webm" - WebM - can contain Ogg or Opus (lossy)
-- ".dts" - DTS - Digital Theater Systems
-- ".m4b" - MPEG-4 Part 14 (audio only) (lossy) used for audiobooks
-- ".dfs" - Direct Stream Digital file (lossless) (convert-only)
-
-[//]: # (</details>  )
-
- 
-... to these types of audio files
-
-[//]: # (<details>)
-
-[//]: # (<summary>... to these types of audio files</summary>)
-
--   ".mp3" - MPEG Audio Stream, Layer III (lossy)
--   ".m4a" - MPEG-4 Part 14 (audio only) containing AAC (lossy) stream
--   ".aac" - Advanced Audio Coding AAC (lossy)
--   ".ogg" - Ogg/Vorbis (lossy)
--   ".opus" - Opus Interactive Audio Codec (lossy)
--   ".flac" - Free Lossless Audio Codec (lossless)
--   ".wav" - Waveform Audio (lossless)
-
-[//]: # (</details>)
-
----------------------------------------------------------------
+___
 
 KataLib can also start in a **Portable** mode using a "-p" argument to the shortcut or by running the `KataLib Portable.exe`.  
-In the Portable mode the app reads its settings, db, etc. from a `portable_settings` directory inside its folder and not from the Windows current user's settings.
+In the Portable mode the app reads its settings, db, etc. from a `portable_settings` directory inside its folder and not from the Windows current user's settings.  
+Using the Portable mode while the app is installed inside the `Program files` directory is not advised.
 
----------------------------------------------------------------
+___
 
 ## The ToolBar
 
@@ -128,7 +158,7 @@ If the Playlist is selected, it removes the selected tracks from the playlist.
 If the Collection panel is selected, the button removes the selected collections from the Library.   
 If the Library files panel is selected, removes the selected files from the Library and <u>deletes them from the disk!</u> 
 5. **Preferences**  
-Opens the Preferences dialog. 
+Opens the [Preferences](#preferences) dialog. 
 6. **About**  
 Shows the About dialog, with info about the program and more...
 
