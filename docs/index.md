@@ -1,4 +1,3 @@
-<!-- TOC -->
 * [User Guide](#user-guide)
   * [Overview](#overview)
   * [The ToolBar](#the-toolbar)
@@ -26,7 +25,7 @@
 * [Extra things to include somewhere](#extra-things-to-include-somewhere)
   * [Player Find](#player-find)
   * [DJ stuff](#dj-stuff)
-<!-- TOC -->
+
 
 # User Guide
 
