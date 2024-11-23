@@ -40,19 +40,19 @@
 
 ## Overview
 
-**KataLib** is a program that can play and organize music (or media) files.  
+**[KataLib](https://github.com/noembryo/KataLib)** is a program that can play, convert and organize music (or media) files.  
   
 This is a Layout with all the application's panels enabled.
 
 ![FullViewWithCollections.png](images/FullViewWithCollections.png)
 
-Its user interface consists of the **Toolbar**, the **Transport**, and three panels, the **Playlist**, the **Library** and the **Properties**.  
+The user interface consists of the **Toolbar**, the **Transport**, and three panels, the **Playlist**, the **Library** and the **Properties**.  
 - The **Playlist** panel is where we can drop or add local media files or YouTube links for playback, conversion or metadata editing.  
 - The **Library** panel has two views:
   - The [Library Collections](#library-collections), where the contents are virtual Collections, consisting of tracks from local files and/or YouTube links.  
   - The [Library Tracks](#library-tracks), where the contents are the media files of any folder we add to the library.  
 
-- The **Properties** panel is where the metadata of the selected track, either from the Playlist or from the Library, are displayed.  
+- The **Properties** panel is where the metadata of the selected track, either from the Playlist or the Library, are displayed.  
   If the Library Collections are shown and a Collection is selected, the **Properties** panel shows the Collection's tracks instead.  
 
 The panels can be toggled on/off, by the **Layout** menu on the bottom right of the main window.  
