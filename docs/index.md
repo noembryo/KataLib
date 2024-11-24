@@ -43,9 +43,6 @@
 ## Overview
 
 
-<u>deletes them from the disk</u>
-
-
 **[KataLib](https://github.com/noembryo/KataLib)** is a Windows program that can play, convert and organize music (or media) files.  
   
 This is a Layout with all the application's panels enabled.
@@ -574,7 +571,6 @@ Some of these options might not be available for some type of Tracks.
     Of course we can still play the original audio.  
     We can also combine and save them to a new video file.
 -   **[Convert](#convert-dialog)**
--   **[File Actions](#files)**
 -   **[Playlist](#playlist-menu)**
 -   **Save tracks as new Playlist** and create a **New Library Collection** if more than one Tracks are selected.
 -   **Add to selected Collection** adds the currently selected Tracks to the currently selected Collection.
@@ -595,7 +591,6 @@ Some of these options might not be available for some type of Tracks.
 
 -   **[Edit metadata](#edit-metadata)**
 -   **[Convert](#convert-dialog)**
--   **[File Actions](#files)**
 -   **Play with Player**  
     Clears the playlist, adds the selected files and starts playing the first of them.
 -   **Append to Player**  
