@@ -24,6 +24,7 @@
       * [• Advanced](#-advanced)
     * [About button](#about-button)
 * [Context Menus](#context-menus)
+    * [Playlist menu](#playlist-menu)
 * [Shortcuts](#shortcuts)
     * [Hotkeys (Global Shortcuts)](#hotkeys-global-shortcuts)
 * [Extra things to include somewhere](#extra-things-to-include-somewhere)
