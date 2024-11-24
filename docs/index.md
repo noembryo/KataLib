@@ -66,7 +66,7 @@ There is also an alternative view of the app, called the **Compact View**...
 ...that consists of a main player window and the **Playlist** and **Properties** independent windows, that can be moved around or turned on/off, to conserve screen space.
 
 While using KOHighlights, keep in mind that almost all the user interface controls, buttons, etc. have a Tooltip, that briefly explains what they do.  
-This Tooltip is shown when you hover your mouse over the corresponding control. 
+This Tooltip is shown when you hover your mouse over the corresponding control.  
 ___
 
 Generally, KataLib can be seen as three programs in one: A Player, a Converter and a Librarian.
@@ -115,8 +115,6 @@ Generally, KataLib can be seen as three programs in one: A Player, a Converter a
     - ".dts" - DTS - Digital Theater Systems
     - ".m4b" - MPEG-4 Part 14 (audio only) (lossy) used for audiobooks
     - ".dfs" - Direct Stream Digital file (lossless) (convert-only)
-    
-     
     
     ... to these types of audio files  
     
@@ -168,19 +166,6 @@ Opens the [Preferences](#preferences) dialog.
 6. **About**  
 Shows the About dialog, with info about the program and more...
 
-If the Library panel is visible and focused, and the Library Tracks are shown, the following buttons are also visible:
-
-  ![Toolbar2.png](images/Toolbar2.png)
-
-1. **Delete files**  
-Removes any selected files from the Library and <u>_**deletes them from the disk!**_</u>
-2. **Library Collections**  
-Toggles showing the Library Collections instead of Library files.
-3. **Filter**  
-Opens the [Filter Library Tracks](#filter-library-tracks) dialog. 
-4. **Library Folders**  
-Shows the Folder Management window.
-
 If the Library panel is visible and focused, and the Library Collections are shown, the following buttons are visible:
 
   ![Toolbar3.png](images/Toolbar3.png)
@@ -191,6 +176,19 @@ Removes the selected collections from the Library.
 Toggles showing the Library files instead of Library Collections.
 3. **Filter**  
 Opens the [Filter Library Collections](#filter-library-collections) dialog.
+
+If the Library panel is visible and focused, and the Library Tracks are shown, the following buttons are also visible:
+
+  ![Toolbar2.png](images/Toolbar2.png)
+
+1. **Delete files**  
+Removes any selected files from the Library and _**<u>deletes them from the disk!</u>**_
+2. **Library Collections**  
+Toggles showing the Library Collections instead of Library files.
+3. **Filter**  
+Opens the [Filter Library Tracks](#filter-library-tracks) dialog. 
+4. **Library Folders**  
+Shows the Folder Management window.
 
 # Detailed info
 
