@@ -49,7 +49,7 @@
 
 **[KataLib](https://github.com/noembryo/KataLib)** is a Windows program that can play, convert and organize music (or media) files.  
   
-This is a Layout with all the application's panels enabled.
+<u>This is a Layout with all the application's panels enabled.</u>
 
 ![FullViewWithCollections.png](images/FullViewWithCollections.png)
 
