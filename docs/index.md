@@ -193,6 +193,9 @@ Opens the [Filter Library Tracks](#filter-library-tracks) dialog.
 4. **Library Folders**  
 Shows the Folder Management window.
 
+
+<u>deletes them from the disk</u>
+
 # Detailed info
 
 ### Playlist
