@@ -40,13 +40,11 @@
 - [ ] Transport usage and screenshots
 - [ ] Compact View specifics
 
-
 ## Overview
-
 
 **[KataLib](https://github.com/noembryo/KataLib)** is a Windows program that can play, convert and organize music (or media) files.  
   
-<u>This is a Layout with all the application's panels enabled.</u>
+This is a Layout with all the application's panels enabled.
 
 ![FullViewWithCollections.png](images/FullViewWithCollections.png)
 
@@ -155,14 +153,14 @@ Shows a menu with the following file management options:
    - **Copy** the selected file(s) to a new location (uses a file selector).
    - **Move** the selected file(s) to a new location (uses a file selector).
    - [**Rename**](#rename) the selected file(s) using pattern.
-   - **Delete** the selected file(s) from the disk. <u>Use with caution!</u> 
+   - **Delete** the selected file(s) from the disk. <ins>_**Use with caution!**_</ins> 
 3. **Metadata**  
 Depending on the number of the selected tracks, this opens the [Edit Metadata](#edit-metadata) or the [Multi Edit Metadata](#multi-edit-metadata) dialog.
 4. **Remove Tracks** / **Delete files** / **Delete Collections**  
 This button changes appearance and function, depending on the currently focused panel.  
 If the Playlist has focus, it removes any selected track(s) from the playlist.  
 If the Library Collections panel is focused, the button removes the selected collection(s) from the Library database.   
-If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <u>deletes them from the disk!</u> 
+If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <ins>_**deletes them from the disk!**_</ins> 
 5. **Preferences**  
 Opens the [Preferences](#preferences) dialog. 
 6. **About**  
@@ -184,10 +182,7 @@ If the Library panel is visible and focused, and the Library Tracks are shown, t
   ![Toolbar2.png](images/Toolbar2.png)
 
 1. **Delete files**  
-Removes any selected files from the Library and _<ins>deletes them from the disk!</ins>_  
-Removes any selected files from the Library and **<u>deletes them from the disk!</u>**  
-Removes any selected files from the Library and _**deletes them from the disk!**_  
-Removes any selected files from the Library and <u>deletes them from the disk</u>  
+Removes any selected files from the Library and _**<ins>deletes them from the disk!</ins>**_
 2. **Library Collections**  
 Toggles showing the Library Collections instead of Library files.
 3. **Filter**  
@@ -199,7 +194,7 @@ Shows the Folder Management window.
 
 ### Playlist
 
-Bla Bla..
+
 
 
 
@@ -258,14 +253,14 @@ Besides the main settings for the encoders, like the _Compression Type_ and the 
 -   **Keep average level at**  
     Keeps the average level of the tracks close to this value.  
     The default value is -18. Going closer to 0 raises the average level.  
-    <u>Don't use levels close to 0, because the sound will get distorted!</u>
+    <ins>_**Don't use levels close to 0, because the sound will get distorted!**_</ins>
 -   **Trim Silence**  
     Removes the silence from the beginning and ending of the track.
 -   **Truncate/Split**  
     Opens an extra dialog that lets you Truncate the track to a certain length or split it into multiple tracks. 
 -   **Keep location**  
     Saves the converted tracks at the same directory as the source tracks (Links are saved to the Download folder).  
-    <u>Be careful not to overwrite the original files with the converted ones.</u>
+    <ins>_**Be careful not to overwrite the original files with the converted ones.**_</ins>
 -   **Join (re-encode)**  
     Create one continuous track by joining the selected ones.  
     The files will get uncompressed, joined, and then re-compressed.  
@@ -475,7 +470,7 @@ We can change the font and position of the subtitle text (for video files that h
 -   **Keep average level at**  
     Keep the average playback level of the YouTube tracks close to this value.  
     The default value is -18. Going closer to 0 raises the average level.  
-    <u>Don't use levels close to 0, because the sound will get distorted!</u>
+    <ins>Don't use levels close to 0, because the sound will get distorted!</ins>
 -   **Add the resolution number to the video filename** when saving a video from YouTube.
 -   **SubTitle encoding**  
     This is the encoding (UTF-8/ANSI) that it will be used for the saved subtitle file.
@@ -572,7 +567,7 @@ Some of these options might not be available for some type of Tracks.
     Of course we can still play the original audio.  
     We can also combine and save them to a new video file.
 -   **[Convert](#convert-dialog)**
--   **File Actions**
+-   **[File Actions](#files)**
 -   **[Playlist](#playlist-menu)**
 -   **Save tracks as new Playlist** and create a **New Library Collection** if more than one Tracks are selected.
 -   **Add to selected Collection** adds the currently selected Tracks to the currently selected Collection.
@@ -593,7 +588,7 @@ Some of these options might not be available for some type of Tracks.
 
 -   **[Edit metadata](#edit-metadata)**
 -   **[Convert](#convert-dialog)**
--   **File Actions**
+-   **[File Actions](#files)**
 -   **Play with Player**  
     Clears the playlist, adds the selected files and starts playing the first of them.
 -   **Append to Player**  
@@ -601,7 +596,7 @@ Some of these options might not be available for some type of Tracks.
 -   **Open externally**  
     Opens the selected files with the system's player.
 -   **Delete files**  
-    Deletes the selected files from the library <u>and from the disk</u>!
+    Deletes the selected files from the library <ins>_**and from the disk**_</ins>.
 
 **Cover**  
 
