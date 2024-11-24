@@ -33,12 +33,16 @@
     * [Rename](#rename)
 <!-- TOC -->
 
-**2do**
+[//]: # (**2do**)
 
-- [ ] Show Collection tracks?
-- [ ] Playlist detailed usage
-- [ ] Transport usage and screenshots
-- [ ] Compact View specifics
+[//]: # ()
+[//]: # (- [ ] Show Collection tracks?)
+
+[//]: # (- [ ] Playlist detailed usage)
+
+[//]: # (- [ ] Transport usage and screenshots)
+
+[//]: # (- [ ] Compact View specifics)
 
 ## Overview
 
@@ -154,14 +158,14 @@ Shows a menu with the following file management options:
    - **Copy** the selected file(s) to a new location (uses a file selector).
    - **Move** the selected file(s) to a new location (uses a file selector).
    - [**Rename**](#rename) the selected file(s) using pattern.
-   - **Delete** the selected file(s) from the disk. <u>_**Use with caution!**_</u> 
+   - **Delete** the selected file(s) from the disk. <u>Use with caution!</u> 
 3. **Metadata**  
 Depending on the number of the selected tracks, this opens the [Edit Metadata](#edit-metadata) or the [Multi Edit Metadata](#multi-edit-metadata) dialog.
 4. **Remove Tracks** / **Delete files** / **Delete Collections**  
 This button changes appearance and function, depending on the currently focused panel.  
 If the Playlist has focus, it removes any selected track(s) from the playlist.  
 If the Library Collections panel is focused, the button removes the selected collection(s) from the Library database.   
-If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <u>_**deletes them from the disk!**_</u> 
+If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <u>deletes them from the disk!</u> 
 5. **Preferences**  
 Opens the [Preferences](#preferences) dialog. 
 6. **About**  
@@ -257,14 +261,14 @@ Besides the main settings for the encoders, like the _Compression Type_ and the 
 -   **Keep average level at**  
     Keeps the average level of the tracks close to this value.  
     The default value is -18. Going closer to 0 raises the average level.  
-    <u>_**Don't use levels close to 0, because the sound will get distorted!**_</u>
+    <u>Don't use levels close to 0, because the sound will get distorted!</u>
 -   **Trim Silence**  
     Removes the silence from the beginning and ending of the track.
 -   **Truncate/Split**  
     Opens an extra dialog that lets you Truncate the track to a certain length or split it into multiple tracks. 
 -   **Keep location**  
     Saves the converted tracks at the same directory as the source tracks (Links are saved to the Download folder).  
-    <u>_**Be careful not to overwrite the original files with the converted ones.**_</u>
+    <u>Be careful not to overwrite the original files with the converted ones.</u>
 -   **Join (re-encode)**  
     Create one continuous track by joining the selected ones.  
     The files will get uncompressed, joined, and then re-compressed.  
@@ -600,7 +604,7 @@ Some of these options might not be available for some type of Tracks.
 -   **Open externally**  
     Opens the selected files with the system's player.
 -   **Delete files**  
-    Deletes the selected files from the library <u>_**and from the disk**_</u>.
+    Deletes the selected files from the library <u>and from the disk</u>!
 
 **Cover**  
 
