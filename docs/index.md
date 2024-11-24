@@ -182,7 +182,7 @@ If the Library panel is visible and focused, and the Library Tracks are shown, t
   ![Toolbar2.png](images/Toolbar2.png)
 
 1. **Delete files**  
-Removes any selected files from the Library and _**<u>deletes them from the disk!</u>**_
+Removes any selected files from the Library and <u>**_deletes them from the disk!_**</u>
 2. **Library Collections**  
 Toggles showing the Library Collections instead of Library files.
 3. **Filter**  
