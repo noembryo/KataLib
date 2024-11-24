@@ -42,6 +42,10 @@
 
 ## Overview
 
+
+<u>deletes them from the disk</u>
+
+
 **[KataLib](https://github.com/noembryo/KataLib)** is a Windows program that can play, convert and organize music (or media) files.  
   
 This is a Layout with all the application's panels enabled.
@@ -192,9 +196,6 @@ Toggles showing the Library Collections instead of Library files.
 Opens the [Filter Library Tracks](#filter-library-tracks) dialog. 
 4. **Library Folders**  
 Shows the Folder Management window.
-
-
-<u>deletes them from the disk</u>
 
 # Detailed info
 
