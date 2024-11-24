@@ -33,16 +33,13 @@
     * [Rename](#rename)
 <!-- TOC -->
 
-[//]: # (**2do**)
+**2do**
 
-[//]: # ()
-[//]: # (- [ ] Show Collection tracks?)
+- [ ] Show Collection tracks?
+- [ ] Playlist detailed usage
+- [ ] Transport usage and screenshots
+- [ ] Compact View specifics
 
-[//]: # (- [ ] Playlist detailed usage)
-
-[//]: # (- [ ] Transport usage and screenshots)
-
-[//]: # (- [ ] Compact View specifics)
 
 ## Overview
 
@@ -187,7 +184,7 @@ If the Library panel is visible and focused, and the Library Tracks are shown, t
   ![Toolbar2.png](images/Toolbar2.png)
 
 1. **Delete files**  
-Removes any selected files from the Library and _<u>deletes them from the disk!</u>_  
+Removes any selected files from the Library and _<ins>deletes them from the disk!</ins>_  
 Removes any selected files from the Library and **<u>deletes them from the disk!</u>**  
 Removes any selected files from the Library and _**deletes them from the disk!**_  
 Removes any selected files from the Library and <u>deletes them from the disk</u>  
