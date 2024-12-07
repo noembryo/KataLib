@@ -39,8 +39,6 @@
 **2do**
 
 - [ ] Show Collection tracks?
-- [ ] Playlist detailed usage
-- [ ] Transport usage and screenshots
 - [ ] Compact View specifics
 
 ___
@@ -66,29 +64,22 @@ The panels can be toggled on/off, by the **Layout** menu on the bottom right of 
 
 The size, position and configuration of the program's window can be saved as a "Layout", and can be easily re-applied from the **User Layouts** sub-menu of the **Layout** menu, or from the menu of the **Preferences** toolbar button.  
 
-There is also an alternative view of the app, called the **Compact View**...  
+There is also an alternative view of the app, the **Compact View**...  
 ![CompactViewTrans.png](images/CompactViewTrans.png)  
-...that consists of a main player window and the **Playlist** and **Properties** independent windows, that can be moved around or turned on/off, to conserve screen space.
+...that consists of only a Main player window and the **Playlist** and **Properties** independent windows, that can be moved around or turned on/off, to conserve screen space.
 
 While using KOHighlights, keep in mind that almost all the user interface controls, buttons, etc. have a Tooltip, that briefly explains what they do.  
 This Tooltip is shown when you hover your mouse over the corresponding control.  
 
 ___
 
-Generally, KataLib can be seen as three programs in one: A Player, a Converter and a Librarian.
+Generally, KataLib can be seen as three programs in one:  
+A Player, a Converter and a Librarian.
 
 - **A Player**
 
     As a Player, it can play any music or video file that we drop on it from the library or from the file explorer. It can load Winamp playlists and can also download YouTube links and/or playlists and play them.  
     By selecting one or more tracks we can do many things like: edit metadata, copy, move, convert or even download the video file itself (if it's a YouTube link track).  
-
-- **A Librarian**
-
-    As a Librarian, it uses a database to store and display two distinct types of data.  
-  - The [Library Collections](#library-collections)  
-    who are virtual playlists of local media files and/or YouTube links.  
-  - The [Library Tracks](#library-tracks)  
-    which are the properties of local media files (tracks).  
 
 - **A Converter**  
 
@@ -131,6 +122,14 @@ Generally, KataLib can be seen as three programs in one: A Player, a Converter a
     -   ".opus" - Opus Interactive Audio Codec (lossy)
     -   ".flac" - Free Lossless Audio Codec (lossless)
     -   ".wav" - Waveform Audio (lossless)
+
+- **A Librarian**
+
+    As a Librarian, it uses a database to store and display two distinct types of data.  
+  - The [Library Collections](#library-collections)  
+    who are virtual playlists of local media files and/or YouTube links.  
+  - The [Library Tracks](#library-tracks)  
+    which are the properties of local media files (tracks).  
 
 ___
 
