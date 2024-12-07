@@ -2,11 +2,14 @@
 
 <!-- TOC -->
 * [User Guide](#user-guide)
-  * [Overview](#overview)
-    * [Portable mode](#portable-mode)
+* [Overview](#overview)
+  * [Portable mode](#portable-mode)
   * [The ToolBar](#the-toolbar)
 * [Detailed info](#detailed-info)
     * [Playlist](#playlist)
+      * [DJ sub-panel](#dj-sub-panel)
+      * [Find](#find)
+    * [Transport](#transport)
     * [Library Collections](#library-collections)
     * [Library Tracks](#library-tracks)
     * [Convert dialog](#convert-dialog)
@@ -17,20 +20,20 @@
       * [Filter Library Tracks](#filter-library-tracks)
     * [Library Folders button](#library-folders-button)
     * [Preferences](#preferences)
-      * [• General](#-general)
-      * [• View](#-view)
-      * [• YouTube Settings](#-youtube-settings)
-      * [• Paths](#-paths)
-      * [• Advanced](#-advanced)
-    * [About button](#about-button)
-* [Context Menus](#context-menus)
-    * [Playlist menu](#playlist-menu)
-* [Shortcuts](#shortcuts)
-    * [Hotkeys (Global Shortcuts)](#hotkeys-global-shortcuts)
-* [Extra things to include somewhere](#extra-things-to-include-somewhere)
-    * [Player Find](#player-find)
-    * [DJ stuff](#dj-stuff)
+      * [General](#general)
+      * [View](#view)
+      * [YouTube Settings](#youtube-settings)
+      * [Paths](#paths)
+      * [Advanced](#advanced)
+    * [About](#about)
     * [Rename](#rename)
+  * [Context Menus](#context-menus)
+    * [Playlist Track](#playlist-track-)
+    * [Library Track](#library-track)
+    * [Library Collection](#library-collection)
+    * [Playlist menu](#playlist-menu)
+    * [Cover](#cover-)
+* [Shortcuts](#shortcuts)
 <!-- TOC -->
 
 **2do**
@@ -40,15 +43,17 @@
 - [ ] Transport usage and screenshots
 - [ ] Compact View specifics
 
-## Overview
+___
 
-**[KataLib](https://github.com/noembryo/KataLib)** is a Windows program that can play, convert and organize music (or media) files.  
-  
+# Overview
+
+**[KataLib](https://github.com/noembryo/KataLib)** is a Windows program that can play, convert and organize music (or video) files.    
+
 This is a Layout with all the application's panels enabled.
 
 ![FullViewWithCollections.png](images/FullViewWithCollections.png)
 
-The user interface consists of the **Toolbar**, the **Transport**, and three panels, the **Playlist**, the **Library** and the **Properties**.  
+The user interface consists of the **[Toolbar](#the-toolbar)**, the **[Transport](#transport)**, and three panels, the **[Playlist](#playlist)**, the **[Library](#library-collections)** and the **Properties**.  
 - The **Playlist** panel is where we can drop or add local media files or YouTube links for playback, conversion or metadata editing.  
 - The **Library** panel has two views:
   - The [Library Collections](#library-collections), where the contents are virtual Collections, consisting of tracks from local files and/or YouTube links.  
@@ -67,6 +72,7 @@ There is also an alternative view of the app, called the **Compact View**...
 
 While using KOHighlights, keep in mind that almost all the user interface controls, buttons, etc. have a Tooltip, that briefly explains what they do.  
 This Tooltip is shown when you hover your mouse over the corresponding control.  
+
 ___
 
 Generally, KataLib can be seen as three programs in one: A Player, a Converter and a Librarian.
@@ -128,7 +134,7 @@ Generally, KataLib can be seen as three programs in one: A Player, a Converter a
 
 ___
 
-### Portable mode
+## Portable mode
 
 KataLib can also start in a **Portable** mode using a "-p" argument to the shortcut or by running the `KataLib Portable.exe`.  
 In the Portable mode the app reads its settings, db, etc. from a `portable_settings` directory inside its folder and not from the Windows current user's settings.  
@@ -140,15 +146,18 @@ ___
 ## The ToolBar
 
 The ToolBar is at the top of the main window. It contains buttons that can be used to perform various actions.  
-These buttons can change or be disabled, depending on the current focus panel of the app.  
+These buttons can change or be disabled, depending on the currently focused panel of the app.  
+Right-clicking on an empty space of the Toolbar, brings up this menu...  
 
-The permanently visible buttons are:
+![MenuToolbar.png](images/MenuToolbar.png)  
+...that lets us change the ToolBar icons' size and appearance.
 
+The permanently visible buttons are:  
   ![Toolbar1.png](images/Toolbar1.png)
 
 1. **Convert**  
 Opens the [Convert dialog](#convert-dialog) to configure the way you want to convert the selected track(s).
-2. **Files**<a id="files"></a>  
+2. **Files**<a id="files"></a>   
 Shows a menu with the following file management options: 
    - **Copy** the selected file(s) to a new location (uses a file selector).
    - **Move** the selected file(s) to a new location (uses a file selector).
@@ -156,15 +165,15 @@ Shows a menu with the following file management options:
    - **Delete** the selected file(s) from the disk. <ins>_**Use with caution!**_</ins> 
 3. **Metadata**  
 Depending on the number of the selected tracks, this opens the [Edit Metadata](#edit-metadata) or the [Multi Edit Metadata](#multi-edit-metadata) dialog.
-4. **Remove Tracks** / **Delete files** / **Delete Collections**  
+4. **Remove Tracks / Delete files / Delete Collections**  
 This button changes appearance and function, depending on the currently focused panel.  
 If the Playlist has focus, it removes any selected track(s) from the playlist.  
 If the Library Collections panel is focused, the button removes the selected collection(s) from the Library database.   
-If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <ins>_**deletes them from the disk!**_</ins> 
+If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <ins>_**deletes them from the disk!**_</ins>  
 5. **Preferences**  
 Opens the [Preferences](#preferences) dialog. 
 6. **About**  
-Shows the About dialog, with info about the program and more...
+Shows the [About](#about) dialog, with info about the program and more...
 
 If the Library panel is visible and focused, and the Library Collections are shown, the following buttons are visible:
 
@@ -192,13 +201,87 @@ Shows the Folder Management window.
 
 # Detailed info
 
+
 ### Playlist
 
+The Playlist panel is the main part of the Player.  
+We can drag audio files or playlists here or use the **Find** button to search YouTube or our Collections for tracks.  
+The loaded Tracks can be used for Playback, get Converted to various formats, saved as a playlist, etc.  
+
+![PlayerView.png](images/PlayerView.png)
+
+The buttons that we find under the Playlist are:
+
+- **Repeat** - makes the player start from the beginning when the last Track is played out. 
+- **Shuffle** - makes the player play in a random order. 
+- **DJ** - opens the [DJ sub-panel](#dj-sub-panel) that lets us crossfade the playing track with the next.
+- **Find** - opens the [Find Tracks](#find) dialog to search for Tracks in the Playlist, YouTube or the Library Collections.
+- **Playlist** - just opens the [Playlist menu](#playlist-menu).
+
+
+#### DJ sub-panel
+
+![DJ.png](images/DJ.png)  
+The DJ controls are:
+- **Auto**  
+  If active, it will automatically start cross-fading the next track when the remaining seconds of the currently playing track are equal to the **Duration**.
+- **XFade**  
+  Pressing this will start a crossfade instantly.
+- **Duration**  
+  The cross-fade's duration in seconds.
+- **Type**  
+  Select the fade in/out curves here.
+- **Level offset**  
+  This is the next track's starting level percent. The track will fade in from this level to the 100% playback level.
+- **Position offset**  
+  Here we can select the next track's starting position.
+- **CrossFader**  
+  Do a crossfade manually.  
+  Moving this slider, simultaneously changes the volumes of both the playing track (lower as the slider moves to the right) and the next track (louder as the slider moves to the right).  
+  At the far right, the crossfade ends, and the slider returns to its initial position.  
+
+#### Find
+
+Pressing the **Find** button opens the **Find Tracks** dialog that lets us search for Tracks at the following places.  
+
+- **YouTube** 
+
+  ![FindYouTube.png](images/FindYouTube.png)  
+  We can search **YouTube** for a song, and if we find it we can **Add** it to the Playlist.  
+  The Clear Playlist button can be used to remove all the tracks from the Playlist, before we add the new-found ones.  
+  If the **Playlists only** checkbox is checked, searching YouTube will return only Playlists, and if we add one of those, all its tracks will be added to our Playlist.  
+  The **Clipboard Text** button lets us see the YouTube addresses that exist in the clipboard or to type one of our own.
+
+- **Collections**
+
+  ![FindCollections.png](images/FindCollections.png)  
+  We can also search for **Collections** in our Library, or for specific Tracks inside these Collections (if the **Track search** is checked).  
+
+- **Playlist**  
+  ![FindPlaylist.png](images/FindPlaylist.png)  
+  Finally, we can search the currently loaded **Playlist** Tracks for a specific track,  and **Play** it. 
 
 
 
+### Transport
 
+![Transport.png](images/Transport.png)
 
+Mostly, self-explanatory playback controls: 
+
+- **Position bar** - Shows the position of the currently playing Track and lets us jump to a specific point. 
+- **Previous Track** - Go to/Play the previous Track.
+- **Stop** - Stop playback.
+- **Play/Pause** - Toggles Play/Pause. 
+- **Next Track** - Go to/Play the next Track. 
+- **Tap Tempo** - Opens the Tap Tempo dialog that lets you manually measure the BPM of the Track and add it to its metadata. 
+- **Time Display** - Shows one of a variety of times, that can be selected either by the menu that opens when right-clicking, or by cycle through with left-clicking on it:
+  - Time Elapsed 
+  - Time Remaining
+  - Total Time Elapsed
+  - Total Time Remaining
+- **Mute** - Mutes/Un-mutes the audio output. 
+- **Volume** - Changes the volume of the audio output. 
 
 
 
@@ -300,7 +383,7 @@ If there is no value in a checked (enabled) entry, the respective metadata will 
 
 Some convenience buttons are:
 - **Auto numbering starting from**  
-   If the **Track Nr.** is checked, the selected tracks are getting a new Track number, sequentially, starting from the number set here. 
+    If the **Track Nr.** is checked, the selected tracks are getting a new Track number, sequentially, starting from the number set here. 
 - **Get Lyrics**  
     This button works a little different here.  
     It searches the lyrics for all the selected tracks, and if some of them are found they are automatically added to the respective metadata.   
@@ -360,7 +443,7 @@ The **Library Folders Menu** has shortcuts to the **Add Folder** and **ReScan Fo
 
 There are five pages in the Preferences dialog:  
 
-#### • General
+#### General
 
 ![Prefs1.png](images/Prefs1.png)
 
@@ -404,7 +487,7 @@ There are five pages in the Preferences dialog:
 - **Prompt for exit**  
   Open a confirmation dialog before exiting the program.
 
-#### • View
+#### View
 
 ![Prefs2.png](images/Prefs2.png)
 
@@ -457,7 +540,7 @@ We can save here the window configurations (size, position, open panels, fonts e
 **Subtitles**  
 We can change the font and position of the subtitle text (for video files that have subtitles). 
 
-#### • YouTube Settings
+#### YouTube Settings
 
 ![Prefs3.png](images/Prefs3.png)
 
@@ -481,7 +564,7 @@ We can change the font and position of the subtitle text (for video files that h
 -   **Use SSL verification**  
     Disable this if you have problems getting information for the YouTube tracks.
 
-#### • Paths
+#### Paths
 
 ![Prefs4.png](images/Prefs4.png)
 
@@ -490,7 +573,7 @@ Here we select the paths to the executables that the app uses to
 - Externally edit a track (four different choices)
 - File manager to handle the file links (if not the default Windows Explorer)
 
-#### • Advanced
+#### Advanced
 
 ![Prefs5.png](images/Prefs5.png)
 
@@ -513,78 +596,106 @@ Natural sorting, sorts numbers in paths as expected (e.g. X1, X2, X11).
 **Use global hotkeys**  
 Control the playback even when KataLib's window is in the background.  
 Pressing the **Change** button opens a dialog that let us select which keyboard combination will do what action.  
-For the default settings see [Global Shortcuts](#hotkeys-global-shortcuts) at the Shortcuts section at the end.
+For the default settings check the [Shortcuts](#shortcuts) section at the end.
 
 
 **DataBase**
 
--   **Backup db**  
-    Backup the database file for safety.
--   **Restore db**  
-    Restore the database from a safety copy.
--   **Compact db**  
-    Compact the database file to save some space.
+- **Backup db**  
+  Backup the database file for safety.
+- **Restore db**  
+  Restore the database from a safety copy.
+- **Compact db**  
+  Compact the database file to save some space.
 
 **Multi-Processing**
 
--   **Threads**  
-    The threads (or cores) that the program will use to do parallel processing of multiple tasks.
--   **Automatically select**  
-    The program will select the number of threads based on the number of physical cores of the processor.
+- **Threads**  
+  The threads (or cores) that the program will use to do parallel processing of multiple tasks.
+- **Automatically select**  
+  The program will select the number of threads based on the number of physical cores of the processor.
 
-### About button
+### About
 
 Info about the program in four pages:
 
--   Information about KataLib.
--   This help page.
--   The libraries that the program uses and their licenses.
--   A log view that prints various debugging info.
+![About.png](images/About.png)
+
+- Information about KataLib.
+- The User Guide.
+- A quick overview of the KataLib's shortcuts.
+- The libraries that the program uses and their licenses.
+- A log view that prints various debugging info during the application's execution.  
 
 ___
 
-# Context Menus
+### Rename
 
-**Playlist Track**  
-The menu have different options, depending on the type of selection.  
+![Rename.png](images/Rename.png)
+
+This dialog lets us rename the selected file(s) using a pattern with variables.  
+The variables are:  
+
+{0} = ARTIST  
+{1} = TITLE (or FILENAME if no TITLE)  
+{2} = ALBUM  
+{3} = TRACK NUMBER  
+{4} = FILENAME  
+{5} = PLAYLIST ROW  
+{6} = GENRE  
+{7} = YEAR  
+
+It can also create directories by using the \\ character.  
+
+Example: {7} {2}\\{0} - {1}  
+
+Produces: 1998 NYC Live\\Portishead - Sour Times
+
+___
+
+## Context Menus
+
+### Playlist Track  
+
+The right-click menu of Playlist Track(s) have different options, depending on the type of selection.  
 Some of these options might not be available for some type of Tracks.
 
 | ![MenuFileTrack.png](images/MenuFileTrack.png) | ![MenuFileTracks.png](images/MenuFileTracks.png) |
 |:----------------------------------------------:|:------------------------------------------------:|
-|            One file Track selected             |          Multiple file Tracks selected           |
+|           _One file Track selected_            |         _Multiple file Tracks selected_          |
 
 
 | ![MenuLinkTrack.png](images/MenuLinkTrack.png) | ![MenuLinkTracks.png](images/MenuLinkTracks.png) |
 |:----------------------------------------------:|:------------------------------------------------:|
-|        One YouTube link Track selected         |      Multiple YouTube link Tracks selected       |
+|       _One YouTube link Track selected_        |     _Multiple YouTube link Tracks selected_      |
 
--   **[Edit metadata](#edit-metadata)**
--   **Save video**  
-    -   If only one YouTube track is selected, we get a sub-menu with its available video files (Video and Audio) that we can download.
-    -   If more than one YouTube tracks are selected we get the option to open the **Select resolution** window to select for every track.
--   **Preview video**  
-    This is a sub-menu with the YouTube track's video-only streams that we can use as preview.  
-    Of course we can still play the original audio.  
-    We can also combine and save them to a new video file.
--   **[Convert](#convert-dialog)**
--   **[File Actions](#files)**
--   **[Playlist](#playlist-menu)**
--   **Save tracks as new Playlist** and create a **New Library Collection** if more than one Tracks are selected.
--   **Add to selected Collection** adds the currently selected Tracks to the currently selected Collection.
--   **Open externally**  
-    Opens the selected file Track with one of our four Custom Editors (see [Paths](#-paths)).
--   **PreBuffer YouTube Tracks**  
-    Downloads immediately the audio stream of the Track(s) to have it ready to play/convert, without the need of an active net connection.
--   **Refresh link** retrieves again the Track's info from YouTube .
--   **Recent tracks** let us re-open recently _played_ tracks.
--   **Remove tracks** just removes the selected tracks from the playlist.
+- **[Edit metadata](#edit-metadata)**
+- **Save video**  
+  -   If only one YouTube track is selected, we get a sub-menu with its available video files (Video and Audio) that we can download.
+  -   If more than one YouTube tracks are selected we get the option to open the **Select resolution** window to select for every track.
+- **Preview video**  
+  This is a sub-menu with the YouTube track's video-only streams that we can use as preview.  
+  Of course we can still use the original audio with it.  
+  We can also combine and save them to a new video file.
+- **[Convert](#convert-dialog)**
+- **[File Actions](#files)**
+- **[Playlist](#playlist-menu)**
+- **Save tracks as new Playlist** and create a **New Library Collection** if more than one Tracks are selected.
+- **Add to selected Collection** adds the currently selected Tracks to the currently selected Collection.
+- **Open externally**  
+  Opens the selected file Track with one of our four Custom Editors (see [Paths](#paths)).
+- **PreBuffer YouTube Tracks**  
+  Downloads immediately the audio stream of the Track(s) to have it ready to play/convert, without the need of an active net connection.
+- **Refresh link** retrieves again the Track's info from YouTube .
+- **Recent tracks** let us re-open recently _played_ tracks.
+- **Remove tracks** just removes the selected tracks from the playlist.
 
 
-**Library item**
+### Library Track
 
 | ![MenuLibTrack.png](images/MenuLibTrack.png) |
 |:--------------------------------------------:|
-|          Library Track(s) selected           |
+|         _Library Track(s) selected_          |
 
 -   **[Edit metadata](#edit-metadata)**
 -   **[Convert](#convert-dialog)**
@@ -598,7 +709,52 @@ Some of these options might not be available for some type of Tracks.
 -   **Delete files**  
     Deletes the selected files from the library <ins>_**and from the disk**_</ins>.
 
-**Cover**  
+
+### Library Collection
+
+| ![MenuLinkTrack.png](images/MenuCollection.png) | ![MenuLinkTracks.png](images/MenuCollections.png) |
+|:-----------------------------------------------:|:-------------------------------------------------:|
+|        _One Library Collection selected_        |      _Multiple Library Collections selected_      |
+
+- **Open Collections** - Select one of the two options:
+  - **Open Collections from file** - Open a `.dbc` Collection file, or convert a `.lst` Playlist file to a new Collection.
+  - **Open Playlist from YouTube** - Create a Collection from a YouTube Playlist address.
+- **Add Playlist tracks as new Collection** - Creates a new Collection from the currently loaded Playlist Tracks.
+- **Re-create Collection with Playlist tracks** - Replaces the currently selected Collection's Tracks with the currently loaded Playlist Tracks. 
+- **Edit Collection** - Opens a dialog to change the Collection Title, Tags or online address. 
+- **Save Collection** - Save the Collection(s) to a `.dbc` file.
+- **Save Collection + Tracks** - Save the Collection(s) to a `.dbc` file, and also creates a folder with the Collection's Track files, named after the Collection's name plus a "_tracks" suffix. 
+- **Append Collection(s) to Playlist** - Appends the Collection's Tracks to the currently loaded Playlist. 
+- **Delete Collection(s)** - Deletes the selected Collection(s) from the Library. 
+
+### Playlist menu
+
+|                Playlist menu                 |                    Sort list menu                    |                    List View menu                    |
+|:--------------------------------------------:|:----------------------------------------------------:|:----------------------------------------------------:|
+| ![MenuPlaylist.png](images/MenuPlaylist.png) | ![MenuPlaylistSort.png](images/MenuPlaylistSort.png) | ![MenuPlaylistView.png](images/MenuPlaylistView.png) |
+
+- **Load list**  
+    Opens a KataLib `.lst` or a WinAmp playlist file.
+- **Save list**  
+    Saves a KataLib `.lst` or a WinAmp playlist file.
+- **Save list + Tracks**  
+    Saves a KataLib `.lst` or a WinAmp playlist, but also creates a folder with the list's Track files, named after the Playlist's name plus a "_tracks" suffix.  
+    If the Playlist contains YouTube links, they will be converted using the current Conversion settings.
+- **Add Tracks**  
+    Just adds media files as Tracks to the Playlist.
+- **Add to Collections**  
+    Adds the current Playlist as a Collection to the **[Library Collections](#library-collections)**.
+- **Sort list**  
+    Opens up the **Sort list menu** that provides basic sorting options.
+- **List View**  
+    Opens up the **List View menu** that let us toggle the Playlist Numbers and Icons, and also change the Tracks appearances.
+- **Reload list**  
+    Reloads the local files from the disk and the YouTube links from the web. 
+- **Clear list**  
+    Removes all the Tracks from the Playlist.
+
+
+### Cover  
 
 These options are enabled/disabled depending on the type of the selection.
 
@@ -625,138 +781,82 @@ These options are enabled/disabled depending on the type of the selection.
 -   **Open externally**  
     Opens the cover with the system's image viewer.
 
-### Playlist menu
 
-|                Playlist menu                 |                    Sort list menu                    |                    List View menu                    |
-|:--------------------------------------------:|:----------------------------------------------------:|:----------------------------------------------------:|
-| ![MenuPlaylist.png](images/MenuPlaylist.png) | ![MenuPlaylistSort.png](images/MenuPlaylistSort.png) | ![MenuPlaylistView.png](images/MenuPlaylistView.png) |
-
-- **Load list**  
-    Opens a KataLib or a WinAmp playlist file.
-- **Save list**  
-    Saves a KataLib or a WinAmp playlist file.
-- **Save list + Tracks**  
-    Saves a KataLib or a WinAmp playlist but also creates a folder with the list's Track files, named after the Playlist's name and a "_tracks" extension.  
-    If the Playlist contains YouTube links, they will be converted using the current Conversion settings.
-- **Add Tracks**  
-    Just adds media files as Tracks to the Playlist.
-- **Add to Collections**  
-    Adds the current Playlist as a Collection to the **[Library Collections](#library-collections)**.
-- **Sort list**  
-    Opens up the **Sort list menu** that provides basic sorting options.
-- **List View**  
-    Opens up the **List View menu** that let us toggle the Playlist Numbers and Icons, and also change the Tracks appearances.
-- **Reload list**  
-    Reloads the local files from the disk and the YouTube links from the web. 
-- **Clear list**  
-    Removes all the Tracks from the Playlist.
-
-----------------------------------------------------------------
+___
 
 # Shortcuts
 
-| **Toolbar** buttons |         |
-|:-------------------:|---------|
-|       Convert       | Alt+C   |
-|    Files (Copy)     | Alt+V   |
-|    Edit Metadata    | Ctrl+E  |
-|    Remove/Delete    | Del     |
-|   Filter Library    | Alt+F   |
-|   Library Folders   | Ctrl+M  |
-|     Preferences     | Ctrl+P  |
-|        About        | Ctrl+I  |
+| **General**                |           |
+|----------------------------|-----------|
+| Toggle Compact View        | Ctrl+D    |
+| Convert                    | Alt+C     |
+| Files (Copy)               | Alt+V     |
+| Edit Metadata              | Ctrl+E    |
+| Remove/Delete              | Del       |
+| Delete from disk           | Shift+Del |
+| Filter Library/Collections | Alt+F     |
+| Library Folders            | Ctrl+M    |
+| Preferences                | Ctrl+P    |
+| About/Info                 | Ctrl+I    |
+| Exit KataLib               | Ctrl+Q    |
 
 
-|   **Player** / **Playlist**   |                   |
-|:-----------------------------:|-------------------|
-|          Play/Pause           | SpaceBar          |
-|             Stop              | Ctrl+SpaceBar     |
-|        Stop with fade         | Ctrl+Alt+SpaceBar |
-|     Stop when track ends      | Shift+SpaceBar    |
-|           Previous            | Ctrl+Left ←       |
-|             Next              | Ctrl+Right →      |
-|             XFade             | Alt+Right →       |
-|      Seek (PositionBar)       | Left/Right ↔      |
-|            Volume             | Up/Down   ↑↓      |
-|             Mute              | Alt+M             |
-|          Repeat All           | Alt+R             |
-|            Shuffle            | Alt+S             |
-|         DJ show/hide          | Alt+D             |
-|             Find              | Ctrl+F            |
-|          Add tracks           | Alt+A             |
-|         Load PlayList         | Ctrl+L            |
-|         Save PlayList         | Ctrl+S            |
-|        Clear PlayList         | Ctrl+Del          |
-|        Reload PlayList        | F5                |
-| Create Collection from tracks | Ctrl+Alt+S        |
+| **Compact Mode**        |        |
+|-------------------------|--------|
+| Toggle Playlist Panel   | Alt+L  |
+| Toggle Properties Panel | Alt+P  |
+| Toggle Always on Top    | Ctrl+O |
 
-  
-### Hotkeys (Global Shortcuts)
 
-Disabled by default.  
-To enable them `Preferences > Advanced > Use global hotkeys`  
-These are the default assignments. They can be changed.
+| **Player**            |                   |
+|-----------------------|-------------------|
+| Play/Pause            | SpaceBar          |
+| Stop                  | Ctrl+SpaceBar     |
+| Stop w/Fade out       | Ctrl+Alt+SpaceBar |
+| Stop when track ends  | Shift+SpaceBar    |
+| Seek (PositionBar)    | Left/Right ↔      |
+| Play Next             | Ctrl+Right →      |
+| Play Previous         | Ctrl+Left ←       |
+| Play Next w/Crossfade | Alt+Right →       |
+| Volume                | Up/Down ↑↓        |
+| Mute                  | Alt+M             |
+| Tap Tempo             | Alt+T             |
+| Select Next           | Ctrl+Down ↓       |
+| Select Previous       | Ctrl+Up ↑         |
 
-|                 |            |
-|:----------------|------------|
-| Play/Pause      | Win+Ctrl+Z |
-| Stop            | Win+Ctrl+C |
-| Previous        | Win+Ctrl+A |
-| Next            | Win+Ctrl+X |
-| Seek Right      | Win+Ctrl+] |
-| Seek Left       | Win+Ctrl+[ |
-| Start crossfade | Win+Ctrl+W |
-| Show/Hide       | Win+Ctrl+S |
-| Increase Volume | Win+.      |
-| Decrease Volume | Win+,      |
 
-# Extra things to include somewhere
+| **PlayList**               |            |
+|----------------------------|------------|
+| Load PlayList              | Ctrl+L     |
+| Save PlayList              | Ctrl+S     |
+| Clear PlayList             | Ctrl+Del   |
+| Reload PlayList            | F5         |
+| Add PlayList as Collection | Ctrl+Alt+S |
+| Find Track                 | Ctrl+F     |
+| Add Tracks                 | Alt+A      |
+| Remove Tracks              | Del        |
+| Delete Tracks              | Shift+Del  |
+| Repeat All                 | Alt+R      |
+| Shuffle                    | Alt+S      |
+| DJ show/hide               | Alt+D      |
 
-### Player Find
+   
+**Hotkeys (Global Shortcuts)**
 
-Pressing the **Find** button opens the **Find Track** dialog that lets us search the tracks that are loaded in the playlist and **Play** them.  
-We can also search YouTube for a song, and if we find it we can **Add** it to the Playlist.  
-If the **Playlists only** checkbox is checked, searching YouTube will return only Playlists, and if we add one of those, all its tracks will be added to our Playlist.  
+These are disabled by default.  
+To enable them go to `Preferences > Advanced > Use global hotkeys`  
+These default assignments can be changed by the user.  
+ 
 
-### DJ stuff
-
-There is also a **DJ** section that let us crossfade the playing track with the next, and monitor tracks and files. The controls are:
-
-- **Auto**  
-  If active, it will automatically start cross-fading the next track when the remaining seconds of the playing track are equal to the **Duration**.
-- **XFade**  
-  Pressing this will start a crossfade instantly.
-- **Duration**  
-  The cross-fade's duration in seconds.
-- **Type**  
-  Select the fade in/out curves here.
-- **Level offset**  
-  This is the next track's starting level percent. The track will fade in from this level to the 100% playback level.
-- **Position offset**  
-  Here we can select the next track's starting position. We can also adjust this by using the **Mark offset** button in the **Preview/Cue** window.
-- **Preview**  
-  Opens up the **Preview/Cue** window. We can use the Play/Pause button and the slider to monitor (e.g. with a set of headphones) to any track in the list or any file in the library that is selected. We can select the physical output for the headphones at the **Phones out** in the **Preferences**.
-- **CrossFader**  
-  Do a crossfade manually. Moving the slider changes the volumes of both the playing track (lower as the slider moves to the right) and the next track (louder as the slider moves to the right). At the far right the crossfade ends and the slider returns to its initial position.
-
-### Rename
-
-![Rename.png](images/Rename.png)
-
-This dialog lets us rename the selected file(s) using a pattern with variables.  
-The variables are:  
-
-{0} = ARTIST  
-{1} = TITLE (or FILENAME if no TITLE)  
-{2} = ALBUM  
-{3} = TRACK NUMBER  
-{4} = FILENAME  
-{5} = PLAYLIST ROW  
-{6} = GENRE  
-{7} = YEAR  
-
-It can also create directories by using the \\ character.  
-
-Example: {7} {2}\\{0} - {1}  
-
-Produces: 1998 NYC Live\\Portishead - Sour Times
+| Global Shortcuts | Hotkeys    |
+|------------------|------------|
+| Play/Pause       | Win+Ctrl+Z |
+| Stop             | Win+Ctrl+C |
+| Previous         | Win+Ctrl+A |
+| Next             | Win+Ctrl+X |
+| Seek Right       | Win+Ctrl+] |
+| Seek Left        | Win+Ctrl+[ |
+| Start crossfade  | Win+Ctrl+W |
+| Show/Hide        | Win+Ctrl+S |
+| Increase Volume  | Win+.      |
+| Decrease Volume  | Win+,      |
