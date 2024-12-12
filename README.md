@@ -1,9 +1,16 @@
 # KataLib
 ![katalib_logo](https://raw.githubusercontent.com/noembryo/KataLib/master/images/katalib.png)
 
+___
 
-**KataLib** are many programs in one Application:
+# [Full User Guide and Documentation](https://noembryo.github.io/KataLib/)
+___
 
+## Usage/Features at a glance
+
+
+
+**KataLib** are many audio programs in one Application
 
 ### You can use it as:
 
