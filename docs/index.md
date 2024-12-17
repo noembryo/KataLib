@@ -36,11 +36,6 @@
 * [Shortcuts](#shortcuts)
 <!-- TOC -->
 
-**2do**
-
-- [ ] Show Collection tracks?
-- [ ] Compact View specifics
-
 ___
 
 # Overview
@@ -52,7 +47,7 @@ This is a Layout with all the application's panels enabled.
 ![FullViewWithCollections.png](images/FullViewWithCollections.png)
 
 The user interface consists of the **[Toolbar](#the-toolbar)**, the **[Transport](#transport)**, and three panels, the **[Playlist](#playlist)**, the **[Library](#library-collections)** and the **Properties**.  
-- The **Playlist** panel is where we can drop or add local media files or YouTube links for playback, conversion or metadata editing.  
+- The **[Playlist](#playlist)** panel is where we can drop or add local media files or YouTube links for playback, conversion or metadata editing.  
 - The **Library** panel has two views:
   - The [Library Collections](#library-collections), where the contents are virtual Collections, consisting of tracks from local files and/or YouTube links.  
   - The [Library Tracks](#library-tracks), where the contents are the media files of any folder we add to the library.  
@@ -68,7 +63,7 @@ There is also an alternative view of the app, the **Compact View**...
 ![CompactViewTrans.png](images/CompactViewTrans.png)  
 ...that consists of only a Main player window and the **Playlist** and **Properties** independent windows, that can be moved around or turned on/off, to conserve screen space.
 
-While using KOHighlights, keep in mind that almost all the user interface controls, buttons, etc. have a Tooltip, that briefly explains what they do.  
+While using KataLib, keep in mind that almost all the user interface controls, buttons, etc. have a Tooltip, that briefly explains what they do.  
 This Tooltip is shown when you hover your mouse over the corresponding control.  
 
 ___
@@ -286,7 +281,17 @@ Mostly, self-explanatory playback controls:
 
 ### Library Collections
 
-When showing **Library Collections**, every row consists of the Collection's name, number of tracks, tags, total duration etc.  
+When showing **Library Collections**, every row consists of the Collection's name, number of tracks, custom tags, total duration etc.  
+
+![CollectionTypes.png](images/CollectionTypes.png)  
+
+There are three types of Collections
+- YouTube Collections that use YouTube Playlist address url
+- Spotify Collections that can use a Spotify Playlist, Album or Podcast list address url
+- Custom Collections that can contain any number of local/YouTube tracks and don't use any address url
+
+Favorite Collections can also get **Starred** and use this attribute for filtering or sorting. 
+
 We can create Collections from the Playlist's right-click menu, we can add tracks to existing Collections, we can remove tracks from them, we can delete existing Collections, or drop them to the Playlist for playback etc.  
 
 
@@ -305,7 +310,7 @@ The file's metadata can be edited either directly by clicking the cells or by pr
 This will open the **Edit Metadata** dialog.  
 If more than one file is selected when pressing the button, the **Multi Edit Metadata** will open and the changes there will affect all the selected files.  
 The selected files can get copied or moved anywhere and also can get converted to many other audio formats with the built-in Converter.  
-They can also be played back, but to have them advance automatically (like a list) the Player's list must be empty.
+They can also be played back, but to have them advance automatically (like a list) the Player's Playlist must be empty.
 
 
 
@@ -315,7 +320,7 @@ A dialog to select the conversion settings.
 
  ![Convert.png](images/Convert.png)
 
-The usual workflow of a convertion, is to decompress the files to waves and then re-encode them with the selected encoder.  
+The usual workflow of a convertion, is to uncompress the files to `.wav` file format, and then re-encode them with the selected encoder.  
 
 Besides the main settings for the encoders, like the _Compression Type_ and the _Quality Control_ of the conversion, there are a few more settings:
 
