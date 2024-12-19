@@ -745,7 +745,9 @@ Some of these options might not be available for some type of Tracks.
     Saves a KataLib `.lst` or a WinAmp playlist, but also creates a folder with the list's Track files, named after the Playlist's name plus a "_tracks" suffix.  
     If the Playlist contains YouTube links, they will be converted using the current Conversion settings.
 - **Add Tracks**  
-    Just adds media files as Tracks to the Playlist.
+    Opens a sub-menu to select what kind of Tracks we want to add to the Playlist.
+  - Tracks from local files (audio/video media files)
+  - Tracks from a YouTube link (can be a single Track or a YouTube Playlist)
 - **Add to Collections**  
     Adds the current Playlist as a Collection to the **[Library Collections](#library-collections)**.
 - **Sort list**  
@@ -837,7 +839,7 @@ ___
 | Reload PlayList            | F5         |
 | Add PlayList as Collection | Ctrl+Alt+S |
 | Find Track                 | Ctrl+F     |
-| Add Tracks                 | Alt+A      |
+| Add Tracks (local files)   | Alt+A      |
 | Remove Tracks              | Del        |
 | Delete Tracks              | Shift+Del  |
 | Repeat All                 | Alt+R      |
