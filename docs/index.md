@@ -10,6 +10,7 @@
       * [DJ sub-panel](#dj-sub-panel)
       * [Find](#find)
     * [Transport](#transport)
+    * [Compact View](#compact-view)
     * [Library Collections](#library-collections)
     * [Library Tracks](#library-tracks)
     * [Convert dialog](#convert-dialog)
@@ -28,11 +29,12 @@
     * [About](#about)
     * [Rename](#rename)
   * [Context Menus](#context-menus)
-    * [Playlist Track](#playlist-track-)
+    * [Playlist Track](#playlist-track)
     * [Library Track](#library-track)
     * [Library Collection](#library-collection)
     * [Playlist menu](#playlist-menu)
-    * [Cover](#cover-)
+    * [Cover menu](#cover-menu)
+    * [Compact View menu](#compact-view-menu)
 * [Shortcuts](#shortcuts)
 <!-- TOC -->
 
@@ -59,8 +61,8 @@ The panels can be toggled on/off, by the **Layout** menu on the bottom right of 
 
 The size, position and configuration of the program's window can be saved as a "Layout", and can be easily re-applied from the **User Layouts** sub-menu of the **Layout** menu, or from the menu of the **Preferences** toolbar button.  
 
-There is also an alternative view of the app, the **Compact View**...  
-![CompactViewTrans.png](images/CompactViewTrans.png)  
+There is also an alternative view of the app, the [**Compact View**](#compact-view)...  
+![CompactViewTrans.png](images/CompactView.png)  
 ...that consists of only a Main player window and the **Playlist** and **Properties** independent windows, that can be moved around or turned on/off, to conserve screen space.
 
 While using KataLib, keep in mind that almost all the user interface controls, buttons, etc. have a Tooltip, that briefly explains what they do.  
@@ -124,7 +126,7 @@ A Player, a Converter and a Librarian.
   - The [Library Collections](#library-collections)  
     who are virtual playlists of local media files and/or YouTube links.  
   - The [Library Tracks](#library-tracks)  
-    which are the properties of local media files (tracks).  
+    which are the properties of local media files (Tracks).  
 
 ___
 
@@ -158,14 +160,20 @@ Shows a menu with the following file management options:
    - [**Rename**](#rename) the selected file(s) using pattern.
    - **Delete** the selected file(s) from the disk. <ins>_**Use with caution!**_</ins> 
 3. **Metadata**  
-Depending on the number of the selected tracks, this opens the [Edit Metadata](#edit-metadata) or the [Multi Edit Metadata](#multi-edit-metadata) dialog.
+Depending on the number of the selected tracks, this opens the [Edit Metadata](#edit-metadata) (single selection) or the [Multi Edit Metadata](#multi-edit-metadata) (multiple selected) dialog.
 4. **Remove Tracks / Delete files / Delete Collections**  
 This button changes appearance and function, depending on the currently focused panel.  
-If the Playlist has focus, it removes any selected track(s) from the playlist.  
+If the Playlist has the focus, it removes any selected track(s) from the playlist.  
 If the Library Collections panel is focused, the button removes the selected collection(s) from the Library database.   
 If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <ins>_**deletes them from the disk!**_</ins>  
 5. **Preferences**  
-Opens the [Preferences](#preferences) dialog. 
+Opens the [Preferences](#preferences) dialog.  
+Clicking the arrow next to the button, opens a drop-down menu with the saved Layouts, and options to manage them, like:
+    - **Add** the current Layout as a new Layout
+    - **Update** the currently selected layout
+    - **Delete** the  currently selected layout
+   
+   The menu also contain an option to switch to the [Compact View](#compact-view).
 6. **About**  
 Shows the [About](#about) dialog, with info about the program and more...
 
@@ -176,7 +184,7 @@ If the Library panel is visible and focused, and the Library Collections are sho
 1. **Delete Collections** (**Remove Tracks** if the Playlist panel has focus)  
 Removes the selected collections from the Library.
 2. **Library Tracks**  
-Toggles showing the Library files instead of Library Collections.
+Display the Library files instead of Library Collections.
 3. **Filter**  
 Opens the [Filter Library Collections](#filter-library-collections) dialog.
 
@@ -191,7 +199,9 @@ Toggles showing the Library Collections instead of Library files.
 3. **Filter**  
 Opens the [Filter Library Tracks](#filter-library-tracks) dialog. 
 4. **Library Folders**  
-Shows the Folder Management window.
+Shows the [Library Folders](#library-folders-window) management window.  
+There is a drop-down menu when we click the arrow next to the button.  
+This **Library Folders Menu** has shortcuts to the **Add Folder** and **ReScan Folders** buttons (see [Library Folders details](#library-folders-window)).
 
 # Detailed info
 
@@ -278,6 +288,22 @@ Mostly, self-explanatory playback controls:
 - **Volume** - Changes the volume of the audio output. 
 
 
+### Compact View
+
+![CompactViewDetails.png](images/CompactViewDetails.png)
+
+This is a minimal view of the app, that consists of only a small, resizable Main window, that shows mostly the Cover Art of the currently playing (or selected) track and the Transport that controls the playback.  
+The transport is like the **Full View**'s [Transport](#transport), only smaller.  
+
+Above the Transport, there is the title of the currently selected/playing Track and two extra buttons that open/close the Playlist and Properties windows.  
+Double-clicking this title text, will show the file in Explorer or the YouTube url in the system's browser.  
+Double-clicking the Cover Art will open the [Edit Metadata](#edit-metadata) (or [Multi](#multi-edit-metadata)) dialog if the Track(s) have metadata.  
+Right-clicking the Cover Art will create a [context menu](#compact-view-menu) with additional options.  
+
+All the **Compact View** windows have a **Close** button (**x**) that closes them.  
+The Playlist and Properties windows have the same functionality as in the **Full View**, and also some more buttons.  
+The **Lock** button, locks the position of the window relative to the Main window, so when we move the Main window, the locked window moves with it in the same way.  
+Additionaly, the Playlist window have a **DJ** button to open the [DJ panel](#dj-sub-panel) of the Playlist, and the Properties window has an **About** button to open the [About](#about) window.  
 
 ### Library Collections
 
@@ -292,7 +318,7 @@ There are three types of Collections
 
 Favorite Collections can also get **Starred** and use this attribute for filtering or sorting. 
 
-We can create Collections from the Playlist's right-click menu, we can add tracks to existing Collections, we can remove tracks from them, we can delete existing Collections, or drop them to the Playlist for playback etc.  
+We can create Collections from the Playlist's right-click menu, we can add tracks to existing Collections, we can remove tracks from them, we can delete existing Collections, drop them to the Playlist for playback etc.  
 
 
 
@@ -402,46 +428,45 @@ Depending on the display mode of the Library (Collections or Tracks), this butto
 #### Filter Library Collections
 
  ![FilterCollections.png](images/FilterCollections.png)  
-With this dialog we can filter the Collections using their tags. 
-We have the options to: 
+With this dialog we can filter the Collections using their tags.  
+We can select multiple tags and we have the options to: 
 - Show Collections containing all the selected tags
 - Show Collections containing any of the selected tags
 - Show Collections containing none of the selected tags
 
-The _"star"_ button lets us filter using only the **Favorites** Collections, while the _"X"_ button clears all the selected tags.  
+The _"star"_ button lets us filter using only the **Favorites** Collections, while the "**x**" button clears all the selected tags.  
 There is also a number next to every tag name, that depicts the number of Collections that use this tag. 
 
 #### Filter Library Tracks
 
- ![FilterTracks2.png](images/FilterTracks2.png) ![FilterTracks.png](images/FilterTracks.png)  
+ ![FilterTracks2.png](images/FilterTracks2.png)     
+![FilterTracks.png](images/FilterTracks.png)  
 With this dialog we can filter the Tracks using their path, their metadata, such as Artist, Album, Title, Genre, Tags, Rating, or All the above.  
 Pressing the **Filter** button updates the view and pressing the **Clear** button resets it.  
 If the checkbox on the **Filter** button is checked, the view is updated as we type, but that can be laggy if the Library shows many files.  
 We can also use boolean operators (OR, AND, NOT in full capitals) with our keywords.  
-E.G. `Pink Floyd AND wall OR Pink Floyd AND Animals`  
-will show us all the Pink Floyd tracks from their "The Wall" and "Animals" albums. 
+E.G. `Pink Floyd AND Animals`  
+will show us all the Pink Floyd tracks from their "Animals" album. 
 
-### Library Folders button
+### Library Folders window
 
-This button opens up the Library Folders dialog. Here we can:
+![FolderManager.png](images/FolderManager.png)
 
--   **Add folder**  
-    Opens up a folder selection dialog to add a folder to the library.  
-    All the music files in the selected folder and the folders inside that selected folder will be added to the library.  
-    Any folder entry that happens to also be a subfolder of another folder entry will be removed as superfluous.  
-    Of course the files will still be in the library.
--   **Remove Selected**  
-    Removes the selected (not the checked) folders from the library (but not from the disk).
--   **ReScan Folders**  
-    Re-scans the folders of the library to update the metadata if changed and to add new files or remove deleted files if the contents of the library folders are changed.
--   **Checked**  
-    If Checked is checked (!) only the checked (!!) folders will be scanned if the ReScan button is pressed.  
-    Otherwise all folders are scanned.
+Manage the Library Folders that contain all the Library Tracks.  
+Here we can:
+
+- **Add folder** opens up a folder selection dialog to add a folder to the library.  
+  All the music files in the selected folder and the folders inside _that_ selected folder will be added to the library.  
+  Any folder entry that happens to also be a subfolder of another folder entry will be removed as superfluous.  
+  Of course the files will still be in the library.
+- **Remove Selected** removes the selected (not the checked) folders from the library (but not from the disk).
+- **ReScan Folders** re-scans the folders of the library to update the metadata if changed and to add new files or remove deleted files if the contents of the library folders are changed.
+- **Checked** If Checked is _checked_ (!) only the _checked_ (!!) folders will be scanned if the **ReScan** button is pressed.  
+  Otherwise all folders are scanned.
+- The **All** checkbox checks/un-checks all the folders
 
 The checkmark in front of a folder also determines if the contents of that folder will be visible to the library.  
 We can also drop folders here from the file explorer to be added to the library.  
-There is a drop-down menu when we click the arrow next to this button.  
-The **Library Folders Menu** has shortcuts to the **Add Folder** and **ReScan Folders** buttons.
 
 ### Preferences
 
@@ -454,16 +479,34 @@ There are five pages in the Preferences dialog:
 - **Language**  
   Select the program's language.
 - **When the Progress finishes:**
-  - **Close progress**  
-  - **Open destination**  
-  - **Play sound**  
-    We can select another sound by pressing the **Select** button and browse for a ".wav" file.
+  - Close progress - closes the Progress window  
+  - Open destination - opens the destination directory in Explorer  
+  - Play sound - make a sound when everything is done  
+  - Select [_current sound_]  
+    We can select another audio file, by pressing this button and browse for a ".wav" file.
 - **Reload last playlist on startup**  
   When the program starts, reload the tracks that where loaded when it was last closed.
 - **Auto advance playlist**  
   When a track finishes playing in the playlist, the next one starts playing automatically.  
 - **Support Multimedia volume changes**  
   Enables the use of multimedia keys to control the playback volume of the player. 
+- **Auto check for updates**  
+  Automatically check online for an updated version.
+- **Keep modification date**  
+  Keep the original modification date when editing a file's metadata.
+- **Show video files**   
+  Show video files in Library and also allow them to play in the Playlist.  
+  These files are always in the database, we just select if we like to see them or not.  
+  Video files are files with extensions like avi, mp4, mov, mkv etc.
+- **Fade on stop**  
+  Fade out the playing track before stopping.
+- **Gapless Playback**  
+  Try to eliminate the silence that is heard during the time it needs for the next track to get loaded.
+- **Exit to tray**  
+  Don't exit KataLib when the close button is pressed, instead minimize it to the tray icon.  
+  If this is enabled the only way to exit the program is by the **Exit** entry in the tray icon menu.
+- **Prompt for exit**  
+  Open a confirmation dialog before exiting the program.
 
 [//]: # (- **Main out**  )
 
@@ -472,24 +515,6 @@ There are five pages in the Preferences dialog:
 [//]: # (- **Phones out**  )
 
 [//]: # (  Select a system Audio output for the monitoring/cue.)
-
-- **Auto check for updates**  
-  Automatically check online for an updated version.
-- **Keep modification date**  
-  Keep the original modification date when editing a file's metadata.
-- **Show video files too**   
-  Show video files in Library and also allow them to play in the Playlist.  
-  These files are always in the database, we just select if we like to see them or not.  
-  Video files are the avi, mp4, mov and mkv files.
-- **Fade on stop**  
-  Fade out the playing track before stopping.
-- **Gapless Playback**  
-  Try to eliminate the silence that is heard during the time it needs for the next track to get loaded.
-- **Exit to tray**  
-  Don't exit KataLib when the close button is pressed, instead minimize to the tray icon.  
-  If this is enabled the only way to exit the program is by the **Exit** entry in the tray icon menu.
-- **Prompt for exit**  
-  Open a confirmation dialog before exiting the program.
 
 #### View
 
@@ -659,7 +684,7 @@ ___
 
 ## Context Menus
 
-### Playlist Track  
+### Playlist Track
 
 The right-click menu of Playlist Track(s) have different options, depending on the type of selection.  
 Some of these options might not be available for some type of Tracks.
@@ -760,33 +785,55 @@ Some of these options might not be available for some type of Tracks.
     Removes all the Tracks from the Playlist.
 
 
-### Cover  
+### Cover menu
 
 These options are enabled/disabled depending on the type of the selection.
 
   ![MenuCover.png](images/MenuCover.png)
 
--   **View Cover**  
-    Opens a window with the cover image at its full resolution (as long as it fits the screen, else it will be the bigger possible).
--   **Load Cover**  
-    Loads an image from a file as cover.
--   **Save Cover**  
-    Saves the cover to an image file on disk.
--   **Download Cover**  
-    This opens the **Download Cover** dialog, that it will search for images based on any of the Artist, Album entries that we provide.
--   **Clear Cover**  
-    Clears the selected cover image.
--   **Copy to clipboard**  
-    Copies the image to system's clipboard.
--   **Paste from clipboard**  
-    If there is an image in the system's clipboard it will be pasted as cover.
--   **Downsize cover**  
-    Resize the cover image to the size specified on the **Download Cover** dialog (only if the cover image is bigger).
--   **Set as Folder Cover**  
-    Sets the cover as the image icon of the Track's parent folder (useful for album folders).
--   **Open externally**  
-    Opens the cover with the system's image viewer.
+- **View Cover**  
+  Opens a window with the cover image at its full resolution (as long as it fits the screen, else it will be the bigger possible).
+- **Load Cover**  
+  Loads an image from a file as cover.
+- **Save Cover**  
+  Saves the cover to an image file on disk.
+- **Download Cover**  
+  This opens the **Download Cover** dialog, that it will search for images based on any of the Artist, Album entries that we provide.
+- **Clear Cover**  
+  Clears the selected cover image.
+- **Copy to clipboard**  
+  Copies the image to system's clipboard.
+- **Paste from clipboard**  
+  If there is an image in the system's clipboard it will be pasted as cover.
+- **Downsize cover**  
+  Resize the cover image to the size specified on the **Download Cover** dialog (only if the cover image is bigger).
+- **Set as Folder Cover**  
+  Sets the cover as the image icon of the Track's parent folder (useful for album folders).
+- **Open externally**  
+  Opens the cover with the system's image viewer.
 
+
+### Compact View menu
+
+Right-clicking on the [Compact View](#compact-view)'s Cover Art will produce this menu
+
+| ![MenuCompact.png](images/MenuCompact.png) | ![MenuCompactView.png](images/MenuCompactView.png) |
+|:------------------------------------------:|:--------------------------------------------------:|
+|          _Compact View Main menu_          |                    _View menu_                     |
+
+- **Track** opens the [Playlist menu](#playlist-menu) for the selected Track
+- **Cover** opens the [Cover Art menu](#cover-menu) for the displayed cover art
+- **View**
+  Shows the View Menu that contains the following
+    - **Full View** - Switch the View mode to Full
+    - **Layout** sub-menu with options to Save and Restore the current layout of all the Compact View windows
+    - **Show Playlist** window toggle switch
+    - **Show Properties** window toggle switch
+    - **Always on Top** mode toggle switch for all the Compact view windows
+- **Find** opens the [Find](#find) dialog
+- **Preferences** opens the [Preferences](#preferences) dialog
+- **About** opens the [About](#about) dialog
+- **Exit from KataLib** exits the application
 
 ___
 
@@ -807,11 +854,11 @@ ___
 | Exit KataLib               | Ctrl+Q    |
 
 
-| **Compact Mode**        |        |
-|-------------------------|--------|
-| Toggle Playlist Panel   | Alt+L  |
-| Toggle Properties Panel | Alt+P  |
-| Toggle Always on Top    | Ctrl+O |
+| **Compact Mode** specific |        |
+|---------------------------|--------|
+| Toggle Playlist Panel     | Alt+L  |
+| Toggle Properties Panel   | Alt+P  |
+| Toggle Always on Top      | Ctrl+O |
 
 
 | **Player**            |                   |
