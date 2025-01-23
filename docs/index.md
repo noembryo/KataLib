@@ -1,7 +1,6 @@
 # User Guide
 
 <!-- TOC -->
-* [User Guide](#user-guide)
 * [Overview](#overview)
   * [Portable mode](#portable-mode)
   * [The ToolBar](#the-toolbar)
@@ -19,7 +18,7 @@
     * [Filter](#filter)
       * [Filter Library Collections](#filter-library-collections)
       * [Filter Library Tracks](#filter-library-tracks)
-    * [Library Folders button](#library-folders-button)
+    * [Library Folders window](#library-folders-window)
     * [Preferences](#preferences)
       * [General](#general)
       * [View](#view)
@@ -27,6 +26,9 @@
       * [Paths](#paths)
       * [Advanced](#advanced)
     * [About](#about)
+    * [Truncate/Split Track](#truncatesplit-track)
+      * [Truncate](#truncate)
+      * [Split](#split)
     * [Rename](#rename)
   * [Context Menus](#context-menus)
     * [Playlist Track](#playlist-track)
@@ -39,6 +41,7 @@
 <!-- TOC -->
 
 ___
+
 
 # Overview
 
@@ -152,56 +155,56 @@ The permanently visible buttons are:
   ![Toolbar1.png](images/Toolbar1.png)
 
 1. **Convert**  
-Opens the [Convert dialog](#convert-dialog) to configure the way you want to convert the selected track(s).
+  Opens the [Convert dialog](#convert-dialog) to configure the way you want to convert the selected track(s).
 2. **Files**<a id="files"></a>   
-Shows a menu with the following file management options: 
-   - **Copy** the selected file(s) to a new location (uses a file selector).
-   - **Move** the selected file(s) to a new location (uses a file selector).
-   - [**Rename**](#rename) the selected file(s) using pattern.
-   - **Delete** the selected file(s) from the disk. <ins>_**Use with caution!**_</ins> 
+  Shows a menu with the following file management options: 
+      - **Copy** the selected file(s) to a new location (uses a file selector).
+      - **Move** the selected file(s) to a new location (uses a file selector).
+      - [**Rename**](#rename) the selected file(s) using pattern.
+      - **Delete** the selected file(s) from the disk. <ins>_**Use with caution!**_</ins> 
 3. **Metadata**  
-Depending on the number of the selected tracks, this opens the [Edit Metadata](#edit-metadata) (single selection) or the [Multi Edit Metadata](#multi-edit-metadata) (multiple selected) dialog.
+  Depending on the number of the selected tracks, this opens the [Edit Metadata](#edit-metadata) (single selection) or the [Multi Edit Metadata](#multi-edit-metadata) (multiple selected) dialog.
 4. **Remove Tracks / Delete files / Delete Collections**  
-This button changes appearance and function, depending on the currently focused panel.  
-If the Playlist has the focus, it removes any selected track(s) from the playlist.  
-If the Library Collections panel is focused, the button removes the selected collection(s) from the Library database.   
-If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <ins>_**deletes them from the disk!**_</ins>  
+  This button changes appearance and function, depending on the currently focused panel.  
+  If the Playlist has the focus, it removes any selected track(s) from the playlist.  
+  If the Library Collections panel is focused, the button removes the selected collection(s) from the Library database.   
+  If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <ins>_**deletes them from the disk!**_</ins>  
 5. **Preferences**  
-Opens the [Preferences](#preferences) dialog.  
-Clicking the arrow next to the button, opens a drop-down menu with the saved Layouts, and options to manage them, like:
-    - **Add** the current Layout as a new Layout
-    - **Update** the currently selected layout
-    - **Delete** the  currently selected layout
+  Opens the [Preferences](#preferences) dialog.  
+  Clicking the arrow next to the button, opens a drop-down menu with the saved Layouts, and options to manage them, like:
+      - **Add** the current Layout as a new Layout
+      - **Update** the currently selected layout
+      - **Delete** the  currently selected layout
    
    The menu also contain an option to switch to the [Compact View](#compact-view).
 6. **About**  
-Shows the [About](#about) dialog, with info about the program and more...
+  Shows the [About](#about) dialog, with info about the program and more...
 
 If the Library panel is visible and focused, and the Library Collections are shown, the following buttons are visible:
 
   ![Toolbar3.png](images/Toolbar3.png)
 
 1. **Delete Collections** (**Remove Tracks** if the Playlist panel has focus)  
-Removes the selected collections from the Library.
+  Removes the selected collections from the Library.
 2. **Library Tracks**  
-Display the Library files instead of Library Collections.
+  Display the Library files instead of Library Collections.
 3. **Filter**  
-Opens the [Filter Library Collections](#filter-library-collections) dialog.
+  Opens the [Filter Library Collections](#filter-library-collections) dialog.
 
 If the Library panel is visible and focused, and the Library Tracks are shown, the following buttons are also visible:
 
   ![Toolbar2.png](images/Toolbar2.png)
 
 1. **Delete files**  
-Removes any selected files from the Library and _**<ins>deletes them from the disk!</ins>**_
+  Removes any selected files from the Library and _**<ins>deletes them from the disk!</ins>**_
 2. **Library Collections**  
-Toggles showing the Library Collections instead of Library files.
+  Toggles showing the Library Collections instead of Library files.
 3. **Filter**  
-Opens the [Filter Library Tracks](#filter-library-tracks) dialog. 
+  Opens the [Filter Library Tracks](#filter-library-tracks) dialog. 
 4. **Library Folders**  
-Shows the [Library Folders](#library-folders-window) management window.  
-There is a drop-down menu when we click the arrow next to the button.  
-This **Library Folders Menu** has shortcuts to the **Add Folder** and **ReScan Folders** buttons (see [Library Folders details](#library-folders-window)).
+  Shows the [Library Folders](#library-folders-window) management window.  
+  There is a drop-down menu when we click the arrow next to the button.  
+  This **Library Folders Menu** has shortcuts to the **Add Folder** and **ReScan Folders** buttons (see [Library Folders details](#library-folders-window)).
 
 # Detailed info
 
@@ -370,7 +373,7 @@ Besides the main settings for the encoders, like the _Compression Type_ and the 
 -   **Trim Silence**  
     Removes the silence from the beginning and ending of the track.
 -   **Truncate/Split**  
-    Opens an extra dialog that lets you Truncate the track to a certain length or split it into multiple tracks. 
+    Opens an extra dialog that lets you [Truncate](#truncate) the track to a certain length or [Split](#split) it into multiple tracks. 
 -   **Keep location**  
     Saves the converted tracks at the same directory as the source tracks (Links are saved to the Download folder).  
     <ins>_**Be careful not to overwrite the original files with the converted ones.**_</ins>
@@ -657,6 +660,41 @@ Info about the program in four pages:
 - A log view that prints various debugging info during the application's execution.  
 
 ___
+
+
+### Truncate/Split Track
+
+In this dialog we can choose to Truncate the start and/or end of the selected track, or Split it into multiple different tracks.  
+We use numbered fields to do this and the **Preview** button lets us audition the results of our changes. 
+
+#### Truncate
+
+![TruncateTrack.png](images/TruncateTrack.png)
+
+This dialog has just two numeric fields in Hours:Minutes:Seconds, to set the start and end of the track.  
+The values are automatically set to the start/end of the track when we first open it.  
+The resulting track will have the same metadata as the original one.
+
+#### Split
+
+![SplitTrack.png](images/SplitTrack.png)
+
+When we first open this dialog, it contains only one slice that shows the **Start** of the first slice of the track, that _has_ to be 00:00:00 (non-editable).  
+Pressing the **Plus (+)** button lets us add a new slice of the track, while pressing the **Minus (-)** button removes the selected slice.  
+Clicking on the **Title** column of any slice, lets us change the title of that slice, and consequentially change the title/filename of the resulting track.  
+The **Start** field of all slices (other than the first) are editable, and we can preview our changes using the **Preview** button.  
+
+All the resulting tracks will have a copy of the original track's metadata, except the Title and the track number.  
+The Title will be the slice's title, and if we check the **Hash (#)** button, the slice number will be the track number in their metadata.  
+
+The **Import cue/txt** button lets us import the offset times from a *.cue or a *.txt file.  
+The `*.cue` format is standard, but the format of the `*.txt` file should be:
+
+* One track/slice per line
+* Time in the form of `Hours:Minutes:Seconds` or `Minutes:Seconds`
+* The format of every line must be one of the below:
+  * Time **+** A blank space **+** Title of the track (_e.g._ "14:53 This is a title"), or
+  * Title of the track **+** A blank space **+** Time (_e.g._ "This is a title 01:03:46")
 
 ### Rename
 
