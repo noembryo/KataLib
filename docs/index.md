@@ -716,7 +716,7 @@ It can also create directories by using the \\ character.
 
 Example: {7} {2}\\{0} - {1}  
 
-Produces: 1998 NYC Live\\Portishead - Sour Times
+Produces: ..\\1998 NYC Live\\Portishead - Sour Times.mp3
 
 ___
 
