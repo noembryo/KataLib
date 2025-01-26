@@ -696,6 +696,8 @@ The `*.cue` format is standard, but the format of the `*.txt` file should be:
   * Time **+** A blank space **+** Title of the track (_e.g._ "14:53 This is a title"), or
   * Title of the track **+** A blank space **+** Time (_e.g._ "This is a title 01:03:46")
 
+Dropping a `*.cue` or `*.txt` file on the dialog will import the times as well. 
+
 ### Rename
 
 ![Rename.png](images/Rename.png)
@@ -727,9 +729,11 @@ ___
 The right-click menu of Playlist Track(s) have different options, depending on the type of selection.  
 Some of these options might not be available for some type of Tracks.
 
-| ![MenuFileTrack.png](images/MenuFileTrack.png) | ![MenuFileTracks.png](images/MenuFileTracks.png) |
-|:----------------------------------------------:|:------------------------------------------------:|
-|           _One file Track selected_            |         _Multiple file Tracks selected_          |
+|           ![MenuFileTrack.png](images/MenuFileTrack.png)           | ![MenuFileTracks.png](images/MenuFileTracks.png) |
+|:------------------------------------------------------------------:|:------------------------------------------------:|
+|                     _One file Track selected_                      |         _Multiple file Tracks selected_          |
+|          ![MenuFileTrack2.png](images/MenuFileTrack2.png)          |                                                  |
+| _One file Track selected<br/>(playing or having a saved position)_ |                                                  |
 
 
 | ![MenuLinkTrack.png](images/MenuLinkTrack.png) | ![MenuLinkTracks.png](images/MenuLinkTracks.png) |
@@ -749,6 +753,10 @@ Some of these options might not be available for some type of Tracks.
 - **[Playlist](#playlist-menu)**
 - **Save tracks as new Playlist** and create a **New Library Collection** if more than one Tracks are selected.
 - **Add to selected Collection** adds the currently selected Tracks to the currently selected Collection.
+- **Position** opens a sub menu that let us save the track's current position or start the playback from its previously saved position.
+  - **Save current position** saves the current position of the Track to disk next to it, in a file with the same name as the Track's filename. 
+  - **Play from saved position** plays the Track from the previously saved position and is enabled only if the relevant file exists.
+  - **Clear saved position** removes the saved position file if it exists. 
 - **Open externally**  
   Opens the selected file Track with one of our four Custom Editors (see [Paths](#paths)).
 - **PreBuffer YouTube Tracks**  
@@ -914,6 +922,8 @@ ___
 | Tap Tempo             | Alt+T             |
 | Select Next           | Ctrl+Down ↓       |
 | Select Previous       | Ctrl+Up ↑         |
+| Save Track's position | Ctrl+Period       |
+| Play from position    | Alt+Period        |
 
 
 | **PlayList**               |            |
