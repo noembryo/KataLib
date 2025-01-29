@@ -30,6 +30,7 @@
       * [Truncate](#truncate)
       * [Split](#split)
     * [Rename](#rename)
+    * [DropZone](#dropzone)
   * [Context Menus](#context-menus)
     * [Playlist Track](#playlist-track)
     * [Library Track](#library-track)
@@ -37,6 +38,7 @@
     * [Playlist menu](#playlist-menu)
     * [Cover menu](#cover-menu)
     * [Compact View menu](#compact-view-menu)
+    * [DropZone menu](#dropzone-menu)
 * [Shortcuts](#shortcuts)
 <!-- TOC -->
 
@@ -548,7 +550,7 @@ Change the font and the row height of the Library entries.
 Change the font size of the track Title that is displayed of the **Compact View** layout.
 
 **DropZone**  
-Enable the use of the DropZone and customize its appearance.
+Enable the use of the [DropZone](#dropzone) and customize its appearance.
 
 
 **Toolbar buttons** and **Show text labels**  
@@ -720,6 +722,17 @@ Example: {7} {2}\\{0} - {1}
 
 Produces: ..\\1998 NYC Live\\Portishead - Sour Times.mp3
 
+### DropZone
+
+![DropZone.png](images/DropZone.png)
+
+The DropZone is this square image that is always on top of all the other windows.  
+You can drop YouTube urls from your browser to open them in KataLib, without the need to leave your browser and switch to KataLib.  
+
+We can change its size and transparency level from the **View** tab in **Preferences**, to make it less intrusive.  
+There are also some useful actions, that are available from a [menu](#dropzone-menu) that you get if you right-click on it.
+
+
 ___
 
 ## Context Menus
@@ -880,6 +893,20 @@ Right-clicking on the [Compact View](#compact-view)'s Cover Art will produce thi
 - **Preferences** opens the [Preferences](#preferences) dialog
 - **About** opens the [About](#about) dialog
 - **Exit from KataLib** exits the application
+
+
+### DropZone menu
+
+![MenuDropZone.png](images/MenuDropZone.png)
+
+This is the menu that you get if you right-click on DropZone.
+
+- **Paste from clipboard** searches the system's clipboard for any YouTube url and adds it to KataLib. 
+- **Show/Hide KataLib window** lets you totally hide all the app's other windows (even from the taskbar), without closing it. 
+- **DroZone** is a sub-menu that can change the DropZone's size or even totally hide it.
+- **Compact View** toggles between the Normal and Compact views of the app.
+- **Preferences** is a shortcut to the Preferences of the app. 
+- **Exit from KataLib** exits the application .
 
 ___
 
