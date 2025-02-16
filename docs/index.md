@@ -493,6 +493,8 @@ There are five pages in the Preferences dialog:
   When the program starts, reload the tracks that where loaded when it was last closed.
 - **Auto advance playlist**  
   When a track finishes playing in the playlist, the next one starts playing automatically.  
+- **Autoplay opened Track/Playlist**  
+  Automatically starts playback if a file or a playlist is opened with KataLib, and the Playlist is empty.
 - **Support Multimedia volume changes**  
   Enables the use of multimedia keys to control the playback volume of the player. 
 - **Auto check for updates**  
