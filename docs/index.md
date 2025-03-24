@@ -8,6 +8,7 @@
     * [Playlist](#playlist)
       * [DJ sub-panel](#dj-sub-panel)
       * [Find](#find)
+      * [Visualizer](#visualizer)
     * [Transport](#transport)
     * [Compact View](#compact-view)
     * [Library Collections](#library-collections)
@@ -37,6 +38,7 @@
     * [Library Collection](#library-collection)
     * [Playlist menu](#playlist-menu)
     * [Cover menu](#cover-menu)
+    * [Visualization menu](#visualization-menu)
     * [Compact View menu](#compact-view-menu)
     * [DropZone menu](#dropzone-menu)
 * [Shortcuts](#shortcuts)
@@ -256,7 +258,7 @@ Pressing the **Find** button opens the **Find Tracks** dialog that lets us searc
 - **YouTube** 
 
   ![FindYouTube.png](images/FindYouTube.png)  
-  We can search **YouTube** for a song, and if we find it we can **Add** it to the Playlist.  
+  We can search **YouTube** for a song, and if we find it we can **Add** it to the Playlist. Dropping it to the Playlist works as well.  
   The Clear Playlist button can be used to remove all the tracks from the Playlist, before we add the new-found ones.  
   If the **Playlists only** checkbox is checked, searching YouTube will return only Playlists, and if we add one of those, all its tracks will be added to our Playlist.  
   The **Clipboard Text** button lets us see the YouTube addresses that exist in the clipboard or to type one of our own.
@@ -271,6 +273,22 @@ Pressing the **Find** button opens the **Find Tracks** dialog that lets us searc
   Finally, we can search the currently loaded **Playlist** Tracks for a specific track,  and **Play** it. 
 
 
+#### Visualizer
+
+The Visualizer is a way to visualize the audio data of the currently playing track.  
+Can be in one of the three modes of visualization:
+
+* **Spectrum Analyzer**  
+  This is the default one, and it shows the frequency spectrum of the currently playing track.  
+![VizAnalyzer.png](images/VizAnalyzer.png)  
+* **Oscilloscope**  
+  This shows the waveform of the currently playing track.  
+![VizOsc.png](images/VizOsc.png)  
+* **Spectrogram**  
+  This shows the frequency spectrum of the currently playing track too, but also shows the time axis.  
+![VizSpec.png](images/VizSpec.png)  
+
+Clicking on the Visualizer will advance to the next type, while right-clicking will open the [Visualization menu](#visualization-menu).
 
 ### Transport
 
@@ -279,8 +297,10 @@ Pressing the **Find** button opens the **Find Tracks** dialog that lets us searc
 Mostly, self-explanatory playback controls: 
 
 - **Position bar** - Shows the position of the currently playing Track and lets us jump to a specific point. 
+- **Waveform** - Optical representation of the audio track that also lets us jump to a specific point.
 - **Previous Track** - Go to/Play the previous Track.
 - **Stop** - Stop playback.
+  Holding `Alt` when clicking, will fade out the track while holding `Shift` when clicking, will stop the playback when the track ends and will select the next one.
 - **Play/Pause** - Toggles Play/Pause. 
 - **Next Track** - Go to/Play the next Track. 
 - **Tap Tempo** - Opens the Tap Tempo dialog that lets you manually measure the BPM of the Track and add it to its metadata. 
@@ -297,8 +317,7 @@ Mostly, self-explanatory playback controls:
 
 ![CompactViewDetails.png](images/CompactViewDetails.png)
 
-This is a minimal view of the app, that consists of only a small, resizable Main window, that shows mostly the Cover Art of the currently playing (or selected) track and the Transport that controls the playback.  
-The transport is like the **Full View**'s [Transport](#transport), only smaller.  
+This is a minimal view of the app, that consists of only a small, resizable Main window, that shows mostly the Cover Art of the currently playing (or selected) track, the [Visualizer](#visualizer) and the [Transport](#transport) that controls the playback.  
 
 Above the Transport, there is the title of the currently selected/playing Track and two extra buttons that open/close the Playlist and Properties windows.  
 Double-clicking this title text, will show the file in Explorer or the YouTube url in the system's browser.  
@@ -873,6 +892,20 @@ These options are enabled/disabled depending on the type of the selection.
 - **Open externally**  
   Opens the cover with the system's image viewer.
 
+
+### Visualization menu
+
+![MenuVisualization.png](images/MenuVisualization.png)
+
+Here we select between the three modes of the [Visualizer](#visualizer)
+
+- **Spectrum Analyzer**
+- **Osciloscope**
+- **Spectrogram**
+
+We can also hide it altogether, by selecting the **None** option.  
+There is also the option to **Show the Waveform** (or not), under the Position bar of the [Transport](#transport).  
+The **Visualization Color** menu, lets us customize the color of the visualization widgets, or return to the defaults.
 
 ### Compact View menu
 
