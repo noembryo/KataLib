@@ -905,7 +905,12 @@ Here we select between the three modes of the [Visualizer](#visualizer)
 
 We can also hide it altogether, by selecting the **None** option.  
 There is also the option to **Show the Waveform** (or not), under the Position bar of the [Transport](#transport).  
-The **Visualization Color** menu, lets us customize the color of the visualization widgets, or return to the defaults.
+
+The **Settings** sub-menu contains the following options:
+
+- The **Visualization Color** menu, lets us customize the color of the visualization widgets, or return to the defaults.
+- The **Spectrum Analyzer Bars** menu, that lets us select the number of bars that will be used from the Spectrum Analyzer.  
+  The default is 32, but we can select a value between 24, 32, 40, 48 and 56.
 
 ### Compact View menu
 
