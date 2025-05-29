@@ -208,7 +208,7 @@ If the Library panel is visible and focused, and the Library Tracks are shown, t
 4. **Library Folders**  
   Shows the [Library Folders](#library-folders-window) management window.  
   There is a drop-down menu when we click the arrow next to the button.  
-  This **Library Folders Menu** has shortcuts to the **Add Folder** and **ReScan Folders** buttons (see [Library Folders details](#library-folders-window)).
+  This **Library Folders Menu** has shortcuts to the **Add Folder** and **ReScan Folders** buttons.
 
 # Detailed info
 
@@ -672,7 +672,7 @@ For the default settings check the [Shortcuts](#shortcuts) section at the end.
 
 ### About
 
-Info about the program in four pages:
+Info about the program in five pages:
 
 ![About.png](images/About.png)
 
