@@ -897,16 +897,26 @@ These options are enabled/disabled depending on the type of the selection.
 
 ### Visualization menu
 
-![MenuVisualization.png](images/MenuVisualization.png)
+| ![MenuVisualization1.png](images/MenuVisualization1.png) | ![MenuVisualization2.png](images/MenuVisualization2.png) |
+|----------------------------------------------------------|----------------------------------------------------------|
 
-Here we select between the three modes of the [Visualizer](#visualizer)
+
+Here we select between the four modes of the [Visualizer](#visualizer)
 
 - **Spectrum Analyzer**
 - **Osciloscope**
 - **Spectrogram**
-
-We can also hide it altogether, by selecting the **None** option.  
+- **Peak Meter**
+- **None** (Totally hides the visualization). 
+ 
 There is also the option to **Show the Waveform** (or not), under the Position bar of the [Transport](#transport).  
+
+In the Visualization Video sub-menu we can create a video with the currently selected (or the last of the selected, if many) track audio, synchronized with the visualization widgets.  
+This sub-menu contains the following options:
+
+- The **Visualization Video Elements** menu, lets us select which of the visualization widgets we want to show in the video.  
+  We have the option to select/de-select any of the widgets or the waveform display.
+- **Create Visualization Video** ask you for the video resolution and the path that the video will be saved.
 
 The **Settings** sub-menu contains the following options:
 
