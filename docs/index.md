@@ -289,6 +289,9 @@ Can be in one of the three modes of visualization:
 * **Spectrogram**  
   This shows the frequency spectrum of the currently playing track too, but also shows the time axis.  
 ![VizSpec.png](images/VizSpec.png)  
+* **Peak Meter**  
+  This shows the level of the currently playing track.  
+![VizPeak.png](images/VizPeak.png)  
 
 Clicking on the Visualizer will advance to the next type, while right-clicking will open the [Visualization menu](#visualization-menu).
 
@@ -914,15 +917,13 @@ There is also the option to **Show the Waveform** (or not), under the Position b
 In the Visualization Video sub-menu we can create a video with the currently selected (or the last of the selected, if many) track audio, synchronized with the visualization widgets.  
 This sub-menu contains the following options:
 
-- The **Visualization Video Elements** menu, lets us select which of the visualization widgets we want to show in the video.  
-  We have the option to select/de-select any of the widgets or the waveform display.
+- The **Visualization Video Elements** menu, lets us select which of the visualization widgets we want to show in the video. We have the option to select/de-select any of the widgets or the waveform display.
 - **Create Visualization Video** ask you for the video resolution and the path that the video will be saved.
 
 The **Settings** sub-menu contains the following options:
 
 - The **Visualization Color** menu, lets us customize the color of the visualization widgets, or return to the defaults.
-- The **Spectrum Analyzer Bars** menu, that lets us select the number of bars that will be used from the Spectrum Analyzer.  
-  The default is 32, but we can select a value between 24, 32, 40, 48 and 56.
+- The **Spectrum Analyzer Bars** menu, that lets us select the number of bars that will be used from the Spectrum Analyzer. The default is 32, but we can select a value between 24, 32, 40, 48 and 56.
 
 ### Compact View menu
 
