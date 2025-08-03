@@ -768,11 +768,9 @@ ___
 The right-click menu of Playlist Track(s) have different options, depending on the type of selection.  
 Some of these options might not be available for some type of Tracks.
 
-|           ![MenuFileTrack.png](images/MenuFileTrack.png)           | ![MenuFileTracks.png](images/MenuFileTracks.png) |
-|:------------------------------------------------------------------:|:------------------------------------------------:|
-|                     _One file Track selected_                      |         _Multiple file Tracks selected_          |
-|          ![MenuFileTrack2.png](images/MenuFileTrack2.png)          |                                                  |
-| _One file Track selected<br/>(playing or having a saved position)_ |                                                  |
+| ![MenuFileTrack.png](images/MenuFileTrack.png) | ![MenuFileTracks.png](images/MenuFileTracks.png) |            ![MenuFileTrack2.png](images/MenuFileTrack2.png)            |
+|:----------------------------------------------:|:------------------------------------------------:|:----------------------------------------------------------------------:|
+|           _One file Track selected_            |         _Multiple file Tracks selected_          | _One file Track selected<br/>(playing or having a<br/>saved position)_ |
 
 
 | ![MenuLinkTrack.png](images/MenuLinkTrack.png) | ![MenuLinkTracks.png](images/MenuLinkTracks.png) |
@@ -796,6 +794,10 @@ Some of these options might not be available for some type of Tracks.
   - **Save current position** saves the current position of the Track to disk next to it, in a file with the same name as the Track's filename. 
   - **Play from saved position** plays the Track from the previously saved position and is enabled only if the relevant file exists.
   - **Clear saved position** removes the saved position file if it exists. 
+- In the **Visualization Video** sub-menu we can create a video with the audio of the currently selected track (one local file track must be selected, not a YouTube link track), synchronized with the visualization widgets.  
+  This sub-menu contains the following options:
+  - The **Visualization Video Elements** menu, lets us select which of the visualization widgets we want to show in the video. We have the option to select/de-select any of the widgets or the waveform display.
+  - **Create Visualization Video** ask you for the video resolution and the path that the video will be saved.
 - **Open externally**  
   Opens the selected file Track with one of our four Custom Editors (see [Paths](#paths)).
 - **PreBuffer YouTube Tracks**  
@@ -900,8 +902,7 @@ These options are enabled/disabled depending on the type of the selection.
 
 ### Visualization menu
 
-| ![MenuVisualization1.png](images/MenuVisualization1.png) | ![MenuVisualization2.png](images/MenuVisualization2.png) |
-|----------------------------------------------------------|----------------------------------------------------------|
+![MenuVisualization.png](images/MenuVisualization.png)
 
 
 Here we select between the four modes of the [Visualizer](#visualizer)
@@ -913,12 +914,6 @@ Here we select between the four modes of the [Visualizer](#visualizer)
 - **None** (Totally hides the visualization). 
  
 There is also the option to **Show the Waveform** (or not), under the Position bar of the [Transport](#transport).  
-
-In the Visualization Video sub-menu we can create a video with the audio of the currently selected track (one local track file must be selected, not a YouTube video), synchronized with the visualization widgets.  
-This sub-menu contains the following options:
-
-- The **Visualization Video Elements** menu, lets us select which of the visualization widgets we want to show in the video. We have the option to select/de-select any of the widgets or the waveform display.
-- **Create Visualization Video** ask you for the video resolution and the path that the video will be saved.
 
 The **Settings** sub-menu contains the following options:
 
