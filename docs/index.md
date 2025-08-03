@@ -914,7 +914,7 @@ Here we select between the four modes of the [Visualizer](#visualizer)
  
 There is also the option to **Show the Waveform** (or not), under the Position bar of the [Transport](#transport).  
 
-In the Visualization Video sub-menu we can create a video with the currently selected (or the last of the selected, if many) track audio, synchronized with the visualization widgets.  
+In the Visualization Video sub-menu we can create a video with the audio of the currently selected track (one local track file must be selected, not a YouTube video), synchronized with the visualization widgets.  
 This sub-menu contains the following options:
 
 - The **Visualization Video Elements** menu, lets us select which of the visualization widgets we want to show in the video. We have the option to select/de-select any of the widgets or the waveform display.
