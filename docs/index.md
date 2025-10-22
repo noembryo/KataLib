@@ -1,6 +1,7 @@
 # User Guide
 
 <!-- TOC -->
+* [User Guide](#user-guide)
 * [Overview](#overview)
   * [Portable mode](#portable-mode)
   * [The ToolBar](#the-toolbar)
@@ -32,6 +33,7 @@
       * [Split](#split)
     * [Rename](#rename)
     * [DropZone](#dropzone)
+    * [Visualization Video Setup](#visualization-video-setup)
   * [Context Menus](#context-menus)
     * [Playlist Track](#playlist-track)
     * [Library Track](#library-track)
@@ -759,6 +761,20 @@ We can change its size and transparency level from the **View** tab in **Prefere
 There are also some useful actions, that are available from a [menu](#dropzone-menu) that you get if you right-click on it.
 
 
+### Visualization Video Setup
+
+![VideoSetup.png](images/VizVideoSetup.png)
+
+The first thing that we can select is the video's resolution.  
+We can customize what the video is going to display by selecting which of metadata we want to include and which of the visualization widgets we want to show in the video.  
+We can also choose what font we want to use.  
+
+With every change we make, the right part of the dialog is updated to reflect what a frame of the video will look like.   
+Keep in mind that this is a static preview. The video will have the visualization widgets synchronized to the track's audio.  
+
+Pressing the **Create** button will ask for the location and the name of the video file, and start the rendering.
+
+
 ___
 
 ## Context Menus
@@ -794,9 +810,7 @@ Some of these options might not be available for some type of Tracks.
   - **Save current position** saves the current position of the Track to disk next to it, in a file with the same name as the Track's filename. 
   - **Play from saved position** plays the Track from the previously saved position and is enabled only if the relevant file exists.
   - **Clear saved position** removes the saved position file if it exists. 
-- In the **Visualization Video** sub-menu we can create a video with the audio of the currently selected track (one local file track must be selected, not a YouTube link track), synchronized with the visualization widgets. This sub-menu contains the following options:
-  - The **Visualization Video Elements** menu, lets us select which of the visualization widgets we want to show in the video. We have the option to select/de-select any of the widgets or the waveform display.
-  - **Create Visualization Video** ask you for the video resolution and the path that the video will be saved.
+- The action **[Create Visualization Video](#visualization-video-setup)**,  opens a dialog that lets us create a video that displays any compination of the visualization widgets and the track's metadata with the audio of the track. This action is available only when a single local file Track is selected.  
 - **Open externally**  
   Opens the selected file Track with one of our four Custom Editors (see [Paths](#paths)).
 - **PreBuffer YouTube Tracks**  
@@ -953,7 +967,8 @@ This is the menu that you get if you right-click on DropZone.
 - **DroZone** is a sub-menu that can change the DropZone's size or even totally hide it.
 - **Compact View** toggles between the Normal and Compact views of the app.
 - **Preferences** is a shortcut to the Preferences of the app. 
-- **Exit from KataLib** exits the application .
+- **Exit from KataLib** exits the application.
+
 
 ___
 
