@@ -8,6 +8,7 @@
 * [Detailed info](#detailed-info)
     * [Playlist](#playlist)
       * [DJ sub-panel](#dj-sub-panel)
+      * [Preview - Cue dialog](#preview---cue-dialog)
       * [Find](#find)
       * [Visualizer](#visualizer)
     * [Transport](#transport)
@@ -250,10 +251,32 @@ The DJ controls are:
   This is the next track's starting level percent. The track will fade in from this level to the 100% playback level.
 - **Position offset**  
   Here we can select the next track's starting position.
+- **Preview**  
+  Opens the [Preview - Cue](#preview---cue-dialog) dialog to preview/listen for the next track.  
 - **CrossFader**  
   Do a crossfade manually.  
   Moving this slider, simultaneously changes the volumes of both the playing track (lower as the slider moves to the right) and the next track (louder as the slider moves to the right).  
   At the far right, the crossfade ends, and the slider returns to its initial position.  
+
+#### Preview - Cue dialog
+
+![Preview.png](images/Preview.png)
+
+This dialog lets us preview/listen to the next track, before we do a crossfade.  
+This is a different player than the one that plays the track, so it can be paused, stopped, etc.  
+It plays whatever track we select from the Playlist or Library.  
+Its output can be configured in the [Preferences](#preferences) to be different from the main player's output, so we can preview the track using headphones or another audio system.  
+
+The controls are:  
+
+- The track's **slider** that let us seek inside the track.  
+  When positioning the mouse over it without clicking, it will show the track's elapsed and remaining time at the specific slider's position. 
+- The **Play/Pause** button, that starts/pauses the preview.  
+- The **Set as next** button, moves the currently selected track after the playing one, setting it ready for crossfade and/or **Mark**  (not working when playing a file from Library)  
+- The **Mark Offset** button, sets the start [Position Offset](#dj-sub-panel) for the track that will be crossfaded with the playing one (only works if the track after the playing one is selected)  
+- The **Time display** can be toggled between elapsed and remaining time.
+- The **Volume** slider controls the preview's audio level.
+
 
 #### Find
 
@@ -523,6 +546,7 @@ There are five pages in the Preferences dialog:
   Automatically starts playback if a file or a playlist is opened with KataLib, and the Playlist is empty.
 - **Support Multimedia volume changes**  
   Enables the use of multimedia keys to control the playback volume of the player. 
+- The **Output section** let us select independently the audio device for the **Main out** of the player, and the **Phones out**, which is what the [Preview - Cue](#preview---cue-dialog) dialog uses.  
 - **Auto check for updates**  
   Automatically check online for an updated version.
 - **Keep modification date**  
@@ -1015,20 +1039,21 @@ ___
 | Play from position    | Alt+Period        |
 
 
-| **PlayList**               |            |
-|----------------------------|------------|
-| Load PlayList              | Ctrl+L     |
-| Save PlayList              | Ctrl+S     |
-| Clear PlayList             | Ctrl+Del   |
-| Reload PlayList            | F5         |
-| Add PlayList as Collection | Ctrl+Alt+S |
-| Find Track                 | Ctrl+F     |
-| Add Tracks (local files)   | Alt+A      |
-| Remove Tracks              | Del        |
-| Delete Tracks              | Shift+Del  |
-| Repeat All                 | Alt+R      |
-| Shuffle                    | Alt+S      |
-| DJ show/hide               | Alt+D      |
+| **PlayList**               |               |
+|----------------------------|---------------|
+| Load PlayList              | Ctrl+L        |
+| Save PlayList              | Ctrl+S        |
+| Clear PlayList             | Ctrl+Del      |
+| Reload PlayList            | F5            |
+| Add PlayList as Collection | Ctrl+Alt+S    |
+| Find Track                 | Ctrl+F        |
+| Add Tracks (local files)   | Alt+A         |
+| Remove Tracks              | Del           |
+| Delete Tracks              | Shift+Del     |
+| Repeat All                 | Alt+R         |
+| Shuffle                    | Alt+S         |
+| DJ show/hide               | Alt+D         |
+| Preview how/hide           | Ctrl+SpaceBar |
 
    
 **Hotkeys (Global Shortcuts)**
