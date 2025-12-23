@@ -546,7 +546,7 @@ There are five pages in the Preferences dialog:
   Automatically starts playback if a file or a playlist is opened with KataLib, and the Playlist is empty.
 - **Support Multimedia volume changes**  
   Enables the use of multimedia keys to control the playback volume of the player. 
-- The **Output section** let us select independently the audio device for the **Main out** of the player, and the **Phones out**, which is what the [Preview - Cue](#preview---cue-dialog) dialog uses.  
+- The **Output section** let us select independently the audio device for the **Main out** of the player, and the **Phones out**, which is what the [Preview/Cue](#preview---cue-dialog) dialog uses.  
 - **Auto check for updates**  
   Automatically check online for an updated version.
 - **Keep modification date**  
@@ -555,10 +555,16 @@ There are five pages in the Preferences dialog:
   Show video files in Library and also allow them to play in the Playlist.  
   These files are always in the database, we just select if we like to see them or not.  
   Video files are files with extensions like avi, mp4, mov, mkv etc.
-- **Fade on stop**  
-  Fade out the playing track before stopping.
 - **Gapless Playback**  
   Try to eliminate the silence that is heard during the time it needs for the next track to get loaded.
+- **Fade on stop**  
+  Fade out the playing track before stopping.
+- **Show … recently played tracks**  
+  Select how many tracks to show in the Recently Played menu.
+- **Speed**  
+  The playback speed of the player. The default is x1.00
+- **Pitch**  
+  The playback pitch of the player in semitones. The default is 0.00
 - **Exit to tray**  
   Don't exit KataLib when the close button is pressed, instead minimize it to the tray icon.  
   If this is enabled the only way to exit the program is by the **Exit** entry in the tray icon menu.
@@ -1020,23 +1026,27 @@ ___
 | Toggle Always on Top      | Ctrl+O |
 
 
-| **Player**            |                   |
-|-----------------------|-------------------|
-| Play/Pause            | SpaceBar          |
-| Stop                  | Ctrl+SpaceBar     |
-| Stop w/Fade out       | Ctrl+Alt+SpaceBar |
-| Stop when track ends  | Shift+SpaceBar    |
-| Seek (PositionBar)    | Left/Right ↔      |
-| Play Next             | Ctrl+Right →      |
-| Play Previous         | Ctrl+Left ←       |
-| Play Next w/Crossfade | Alt+Right →       |
-| Volume                | Up/Down ↑↓        |
-| Mute                  | Alt+M             |
-| Tap Tempo             | Alt+T             |
-| Select Next           | Ctrl+Down ↓       |
-| Select Previous       | Ctrl+Up ↑         |
-| Save Track's position | Ctrl+Period       |
-| Play from position    | Alt+Period        |
+| **Player**                 |                     |
+|----------------------------|---------------------|
+| Play/Pause                 | SpaceBar            |
+| Stop                       | Ctrl+SpaceBar       |
+| Stop w/Fade out            | Ctrl+Alt+SpaceBar   |
+| Stop when track ends       | Shift+SpaceBar      |
+| Seek (PositionBar)         | Left/Right ↔        |
+| Play Next                  | Ctrl+Right →        |
+| Play Previous              | Ctrl+Left ←         |
+| Play Next w/Crossfade      | Alt+Right →         |
+| Volume                     | Up/Down ↑↓          |
+| Mute                       | Alt+M               |
+| Tap Tempo                  | Alt+T               |
+| Select Next                | Ctrl+Down ↓         |
+| Select Previous            | Ctrl+Up ↑           |
+| Save Track's position      | Ctrl+Period         |
+| Play from position         | Alt+Period          |
+| Player speed down by 0.1   | [ or /              |
+| Player speed up by 0.1     | ] or *              |
+| Player pitch semitone down | - (Shift for cents) |
+| Player pitch semitone up   | + (Shift for cents) |
 
 
 | **PlayList**               |               |
