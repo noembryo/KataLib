@@ -1026,27 +1026,27 @@ ___
 | Toggle Always on Top      | Ctrl+O |
 
 
-| **Player**                 |                     |
-|----------------------------|---------------------|
-| Play/Pause                 | SpaceBar            |
-| Stop                       | Ctrl+SpaceBar       |
-| Stop w/Fade out            | Ctrl+Alt+SpaceBar   |
-| Stop when track ends       | Shift+SpaceBar      |
-| Seek (PositionBar)         | Left/Right ↔        |
-| Play Next                  | Ctrl+Right →        |
-| Play Previous              | Ctrl+Left ←         |
-| Play Next w/Crossfade      | Alt+Right →         |
-| Volume                     | Up/Down ↑↓          |
-| Mute                       | Alt+M               |
-| Tap Tempo                  | Alt+T               |
-| Select Next                | Ctrl+Down ↓         |
-| Select Previous            | Ctrl+Up ↑           |
-| Save Track's position      | Ctrl+Period         |
-| Play from position         | Alt+Period          |
-| Player speed down by 0.1   | [ or /              |
-| Player speed up by 0.1     | ] or *              |
-| Player pitch semitone down | - (Shift for cents) |
-| Player pitch semitone up   | = (Shift for cents) |
+| **Player**                 |                          |
+|----------------------------|--------------------------|
+| Play/Pause                 | SpaceBar                 |
+| Stop                       | Ctrl+SpaceBar            |
+| Stop w/Fade out            | Ctrl+Alt+SpaceBar        |
+| Stop when track ends       | Shift+SpaceBar           |
+| Seek (PositionBar)         | Left/Right ↔             |
+| Play Next                  | Ctrl+Right →             |
+| Play Previous              | Ctrl+Left ←              |
+| Play Next w/Crossfade      | Alt+Right →              |
+| Volume                     | Up/Down ↑↓               |
+| Mute                       | Alt+M                    |
+| Tap Tempo                  | Alt+T                    |
+| Select Next                | Ctrl+Down ↓              |
+| Select Previous            | Ctrl+Up ↑                |
+| Save Track's position      | Ctrl+Period              |
+| Play from position         | Alt+Period               |
+| Player speed down by 0.1   | [ or / (Shift for cents) |
+| Player speed up by 0.1     | ] or * (Shift for cents) |
+| Player pitch semitone down | - or _ (Shift for cents) |
+| Player pitch semitone up   | = or + (Shift for cents) |
 
 
 | **PlayList**               |               |
