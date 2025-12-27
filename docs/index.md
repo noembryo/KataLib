@@ -559,12 +559,14 @@ There are five pages in the Preferences dialog:
   Try to eliminate the silence that is heard during the time it needs for the next track to get loaded.
 - **Fade on stop**  
   Fade out the playing track before stopping.
-- **Show … recently played tracks**  
+- **Show […] recently played tracks**  
   Select how many tracks to show in the Recently Played menu.
 - **Speed**  
-  The playback speed of the player. The default is x1.00
+  The playback speed of the player. The default is x1.00.
+  If the speed is modified, the resulting audio can be saved from the track's right-click menu (Export modified audio).
 - **Pitch**  
-  The playback pitch of the player in semitones. The default is 0.00
+  The playback pitch of the player in semitones. The default is 0.00.
+  If the pitch is modified, the resulting audio can be saved from the track's right-click menu (Export modified audio).
 - **Exit to tray**  
   Don't exit KataLib when the close button is pressed, instead minimize it to the tray icon.  
   If this is enabled the only way to exit the program is by the **Exit** entry in the tray icon menu.
