@@ -1046,7 +1046,7 @@ ___
 | Player speed down by 0.1   | [ or /              |
 | Player speed up by 0.1     | ] or *              |
 | Player pitch semitone down | - (Shift for cents) |
-| Player pitch semitone up   | + (Shift for cents) |
+| Player pitch semitone up   | = (Shift for cents) |
 
 
 | **PlayList**               |               |
