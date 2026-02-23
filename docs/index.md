@@ -29,9 +29,7 @@
       * [Paths](#paths)
       * [Advanced](#advanced)
     * [About](#about)
-    * [Truncate/Split Track](#truncatesplit-track)
-      * [Truncate](#truncate)
-      * [Split](#split)
+    * [Split-Truncate Track](#split-truncate-track)
     * [Rename](#rename)
     * [DropZone](#dropzone)
     * [Visualization Video Setup](#visualization-video-setup)
@@ -423,8 +421,8 @@ Besides the main settings for the encoders, like the _Compression Type_ and the 
     <ins>_**Don't use levels close to 0, because the sound will get distorted!**_</ins>
 -   **Trim Silence**  
     Removes the silence from the beginning and ending of the track.
--   **Truncate/Split**  
-    Opens an extra dialog that lets you [Truncate](#truncate) the track to a certain length or [Split](#split) it into multiple tracks. 
+-   **Split/Truncate**  
+    Opens an extra dialog that lets you [Split-Truncate](#split-truncate-track) a track into multiple slices or to a certain length . 
 -   **Keep location**  
     Saves the converted tracks at the same directory as the source tracks (Links are saved to the Download folder).  
     <ins>_**Be careful not to overwrite the original files with the converted ones.**_</ins>
@@ -724,30 +722,23 @@ Info about the program in five pages:
 ___
 
 
-### Truncate/Split Track
+### Split-Truncate Track
 
 In this dialog we can choose to Truncate the start and/or end of the selected track, or Split it into multiple different tracks.  
 We use numbered fields to do this and the **Preview** button lets us audition the results of our changes. 
 
-#### Truncate
-
-![TruncateTrack.png](images/TruncateTrack.png)
-
-This dialog has just two numeric fields in Hours:Minutes:Seconds, to set the start and end of the track.  
-The values are automatically set to the start/end of the track when we first open it.  
-The resulting track will have the same metadata as the original one.
-
-#### Split
-
 ![SplitTrack.png](images/SplitTrack.png)
 
-When we first open this dialog, it contains only one slice that shows the **Start** of the first slice of the track, that _has_ to be 00:00:00 (non-editable).  
+When we first open this dialog, it contains only one slice with its start time (which is also the start of the track), and a second time, the time for the **(End of the track)**.  
+The default values for these are 00:00:00 for the start, and the track's duration for the end.  
+Changing these will truncate the start/end of the track.  
+
 Pressing the **Plus (+)** button lets us add a new slice of the track, while pressing the **Minus (-)** button removes the selected slice.  
-Clicking on the **Title** column of any slice, lets us change the title of that slice, and consequentially change the title/filename of the resulting track.  
-The **Start** field of all slices (other than the first) are editable, and we can preview our changes using the **Preview** button.  
+Double-clicking on the **Title** column of any slice, lets us change the title of that slice, and consequentially change the title/filename of the resulting track.  
+The **Start** field of all slices are editable, and we can preview our changes using the **Preview** button.  
 
 All the resulting tracks will have a copy of the original track's metadata, except the Title and the track number.  
-The Title will be the slice's title, and if we check the **Hash (#)** button, the slice number will be the track number in their metadata.  
+The Title will be the slice's title, and if we check the **Add slice number** checkbox, the slice number will be the track number in their metadata.  
 
 The **Import cue/txt** button lets us import the offset times from a *.cue or a *.txt file.  
 The `*.cue` format is standard, but the format of the `*.txt` file should be:
@@ -1028,27 +1019,27 @@ ___
 | Toggle Always on Top      | Ctrl+O |
 
 
-| **Player**                 |                          |
-|----------------------------|--------------------------|
-| Play/Pause                 | SpaceBar                 |
-| Stop                       | Ctrl+SpaceBar            |
-| Stop w/Fade out            | Ctrl+Alt+SpaceBar        |
-| Stop when track ends       | Shift+SpaceBar           |
-| Seek (PositionBar)         | Left/Right ↔             |
-| Play Next                  | Ctrl+Right →             |
-| Play Previous              | Ctrl+Left ←              |
-| Play Next w/Crossfade      | Alt+Right →              |
-| Volume                     | Up/Down ↑↓               |
-| Mute                       | Alt+M                    |
-| Tap Tempo                  | Alt+T                    |
-| Select Next                | Ctrl+Down ↓              |
-| Select Previous            | Ctrl+Up ↑                |
-| Save Track's position      | Ctrl+Period              |
-| Play from position         | Alt+Period               |
-| Player speed down by 0.1   | [ or / (Shift for cents) |
-| Player speed up by 0.1     | ] or * (Shift for cents) |
-| Player pitch semitone down | - or _ (Shift for cents) |
-| Player pitch semitone up   | = or + (Shift for cents) |
+| **Player**                 |                                       |
+|----------------------------|---------------------------------------|
+| Play/Pause                 | SpaceBar                              |
+| Stop                       | Ctrl+SpaceBar                         |
+| Stop w/Fade out            | Ctrl+Alt+SpaceBar                     |
+| Stop when track ends       | Shift+SpaceBar                        |
+| Seek (PositionBar)         | Left/Right ↔                          |
+| Play Next                  | Ctrl+Right →                          |
+| Play Previous              | Ctrl+Left ←                           |
+| Play Next w/Crossfade      | Alt+Right →                           |
+| Volume                     | Up/Down ↑↓                            |
+| Mute                       | Alt+M                                 |
+| Tap Tempo                  | Alt+T                                 |
+| Select Next                | Ctrl+Down ↓                           |
+| Select Previous            | Ctrl+Up ↑                             |
+| Save Track's position      | Ctrl+Period                           |
+| Play from position         | Alt+Period                            |
+| Player speed down by 0.1   | [ or / (Shift for cents, Alt for 1.0) |
+| Player speed up by 0.1     | ] or * (Shift for cents, Alt for 1.0) |
+| Player pitch semitone down | - or _ (Shift for cents, Alt for 0.0) |
+| Player pitch semitone up   | = or + (Shift for cents, Alt for 0.0) |
 
 
 | **PlayList**               |               |
