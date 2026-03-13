@@ -953,8 +953,11 @@ There is also the option to **Show the Waveform** (or not), under the Position b
 
 The **Settings** sub-menu contains the following options:
 
-- The **Visualization Color** menu, lets us customize the color of the visualization widgets, or return to the defaults.
-- The **Spectrum Analyzer Bars** menu, that lets us select the number of bars that will be used from the Spectrum Analyzer. The default is 32, but we can select a value between 24, 32, 40, 48 and 56.
+- The **Visualization Color** menu, let us customize the color of the visualization widgets, or return to the defaults.
+- The **Spectrum Analyzer** menu, let customize the Spectrum Analyzer. It has 3 sub-menus:
+  - The **Number of Bars** sub-menu, that let us select the number of bars that will be used from the Spectrum Analyzer. The default is 32, but we can select a value between 24, 32, 40, 48 and 56.
+  - The **Peak hold** sub-menu, that let us enable/disable the peak hold of the Spectrum Analyzer.
+  - The **Optimize height** sub-menu, that let us enable/disable the height optimization, i.e. if the bar height would be normalized to the maximum level, regardless of the track's waveform height.
 
 ### Compact View menu
 
