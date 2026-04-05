@@ -958,6 +958,10 @@ The **Settings** sub-menu contains the following options:
   - The **Number of Bars** sub-menu, that let us select the number of bars that will be used from the Spectrum Analyzer. The default is 32, but we can select a value between 24, 32, 40, 48 and 56.
   - The **Peak hold** sub-menu, that let us enable/disable the peak hold of the Spectrum Analyzer.
   - The **Optimize height** sub-menu, that let us enable/disable the height optimization, i.e. if the bar height would be normalized to the maximum level, regardless of the track's waveform height.
+- The **Oscilloscope** menu, with the **Zoom level** sub-menu, that can select between different zoom levels of its sample window:
+  - Low Zoom
+  - Normal Zoom
+  - High Zoom
 
 ### Compact View menu
 
