@@ -111,13 +111,17 @@ ___
 ## Compatibility
 ### Windows XP
 From version 4.x.x onwards, KataLib dropped support for Windows XP.  
-[The last XP compatible build can be found here][LastXP].  
+The last XP compatible build [can be found here][LastXP].  
 To use it, you also need an XP compatible `FFmpeg.exe` in "Preferences".  
-[Some XP compatible builds can be found here][FFmpeg4XP].
+Some XP compatible builds [can be found here][FFmpeg4XP].
 
-### Windows 7
+### Windows 32bit
+From version 5.x.x onwards, KataLib dropped support for 32bit versions of Windows.  
+The last x86 compatible build [can be found here][Last32].
+
+### Windows 7 x64
 KataLib can't start if Microsoft Visual C++ 14.0 is not installed. [Get it here][C++2014].  
-The Windows 7 32bit version also needs the KB2533623 update thats is included in [KB3063858][w7upd] ([direct link][w7upd2]).
+The Windows 7 32bit version also needs the KB2533623 update that is included in [KB3063858][w7upd] ([direct link][w7upd2]), for the [last x86 build](https://github.com/noembryo/KataLib/releases/download/v4.5.5.0/KataLib.v4.5.5.0.setup.exe).
 ___
 
 ## Downloads
@@ -128,6 +132,7 @@ Read the version history at [App's Page](http://www.noembryo.com/apps.php?katali
 
 [ReleaseLink]:https://GitHub.com/noembryo/KataLib/releases/
 [LastXP]:https://mega.nz/folder/KVEVzToZ#gOI39JyhXc84aXIFt1pigQ
+[Last32]:https://github.com/noembryo/KataLib/releases/download/v4.5.5.0/KataLib.v4.5.5.0.setup.exe
 [FFmpeg4XP]:https://rwijnsma.home.xs4all.nl/files/ffmpeg/?C=M;O=D/
 [C++2014]:https://aka.ms/vs/17/release/vc_redist.x86.exe
 [w7upd]:https://www.microsoft.com/en-us/download/details.aspx?id=47409
