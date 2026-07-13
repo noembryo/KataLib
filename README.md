@@ -119,7 +119,7 @@ Some XP compatible builds [can be found here][FFmpeg4XP].
 From version 5.x.x onwards, KataLib dropped support for 32bit versions of Windows.  
 The last x86 compatible build [can be found here][Last32].
 
-### Windows 7 x64
+### Windows 7
 KataLib can't start if Microsoft Visual C++ 14.0 is not installed. [Get it here][C++2014].  
 The Windows 7 32bit version also needs the KB2533623 update that is included in [KB3063858][w7upd] ([direct link][w7upd2]), for the [last x86 build](https://github.com/noembryo/KataLib/releases/download/v4.5.5.0/KataLib.v4.5.5.0.setup.exe).
 ___
