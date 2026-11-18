@@ -31,6 +31,7 @@
     * [About](#about)
     * [Split-Truncate Track](#split-truncate-track)
     * [Rename](#rename)
+    * [Lossless Edit](#lossless-edit)
     * [DropZone](#dropzone)
     * [Visualization Video Setup](#visualization-video-setup)
   * [Context Menus](#context-menus)
@@ -44,10 +45,10 @@
     * [DropZone menu](#dropzone-menu)
 * [Shortcuts](#shortcuts)
 <!-- TOC -->
-
 ___
 
-[Οδηγίες Χρήσης στα Ελληνικά.](index_el.md)
+[Οδηγίες Χρήσης στα Ελληνικά.](index_el.md)  
+[日本語版のユーザーガイド。](index_ja.md)
 
 
 # Overview
@@ -56,9 +57,9 @@ ___
 
 This is a Layout with all the application's panels enabled.
 
-![FullViewWithCollections.png](images/FullViewWithCollections.png)
-
+![FullViewWithCollections.png](images/FullViewWithCollections.png)   
 The user interface consists of the **[Toolbar](#the-toolbar)**, the **[Transport](#transport)**, and three panels, the **[Playlist](#playlist)**, the **[Library](#library-collections)** and the **Properties**.  
+
 - The **[Playlist](#playlist)** panel is where we can drop or add local media files or YouTube links for playback, conversion or metadata editing.  
 - The **Library** panel has two views:
   - The [Library Collections](#library-collections), where the contents are virtual Collections, consisting of tracks from local files and/or YouTube links.  
@@ -162,56 +163,58 @@ The permanently visible buttons are:
   ![Toolbar1.png](images/Toolbar1.png)
 
 1. **Convert**  
-  Opens the [Convert dialog](#convert-dialog) to configure the way you want to convert the selected track(s).
+    Opens the [Convert dialog](#convert-dialog) to configure the way you want to convert the selected track(s).
 2. **Files**<a id="files"></a>   
-  Shows a menu with the following file management options: 
+    Shows a menu with the following file management options: 
+    
       - **Copy** the selected file(s) to a new location (uses a file selector).
       - **Move** the selected file(s) to a new location (uses a file selector).
-      - [**Rename**](#rename) the selected file(s) using pattern.
+      - [**Rename**](#rename) the selected file(s) using a pattern.
+      - [**Lossless edit**](#lossless-edit) the selected file(s).
       - **Delete** the selected file(s) from the disk. <ins>_**Use with caution!**_</ins> 
 3. **Metadata**  
-  Depending on the number of the selected tracks, this opens the [Edit Metadata](#edit-metadata) (single selection) or the [Multi Edit Metadata](#multi-edit-metadata) (multiple selected) dialog.
+    Depending on the number of the selected tracks, this opens the [Edit Metadata](#edit-metadata) (single selection) or the [Multi Edit Metadata](#multi-edit-metadata) (multiple selected) dialog.
 4. **Remove Tracks / Delete files / Delete Collections**  
-  This button changes appearance and function, depending on the currently focused panel.  
-  If the Playlist has the focus, it removes any selected track(s) from the playlist.  
-  If the Library Collections panel is focused, the button removes the selected collection(s) from the Library database.   
-  If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <ins>_**deletes them from the disk!**_</ins>  
+    This button changes appearance and function, depending on the currently focused panel.  
+    If the Playlist has the focus, it removes any selected track(s) from the playlist.  
+    If the Library Collections panel is focused, the button removes the selected collection(s) from the Library database.   
+    If the Library Tracks panel is selected, it removes the selected file(s) from the Library and <ins>_**deletes them from the disk!**_</ins>  
 5. **Preferences**  
-  Opens the [Preferences](#preferences) dialog.  
-  Clicking the arrow next to the button, opens a drop-down menu with the saved Layouts, and options to manage them, like:
+    Opens the [Preferences](#preferences) dialog.  
+    Clicking the arrow next to the button, opens a drop-down menu with the saved Layouts, and options to manage them, like:
       - **Add** the current Layout as a new Layout
       - **Update** the currently selected layout
       - **Delete** the  currently selected layout
    
-   The menu also contain an option to switch to the [Compact View](#compact-view).
+    The menu also contain an option to switch to the [Compact View](#compact-view).
 6. **About**  
-  Shows the [About](#about) dialog, with info about the program and more...
+    Shows the [About](#about) dialog, with info about the program and more...
 
 If the Library panel is visible and focused, and the Library Collections are shown, the following buttons are visible:
 
   ![Toolbar3.png](images/Toolbar3.png)
 
 1. **Delete Collections** (**Remove Tracks** if the Playlist panel has focus)  
-  Removes the selected collections from the Library.
+    Removes the selected collections from the Library.
 2. **Library Tracks**  
-  Display the Library files instead of Library Collections.
+    Display the Library files instead of Library Collections.
 3. **Filter**  
-  Opens the [Filter Library Collections](#filter-library-collections) dialog.
+    Opens the [Filter Library Collections](#filter-library-collections) dialog.
 
 If the Library panel is visible and focused, and the Library Tracks are shown, the following buttons are also visible:
 
   ![Toolbar2.png](images/Toolbar2.png)
 
 1. **Delete files**  
-  Removes any selected files from the Library and _**<ins>deletes them from the disk!</ins>**_
+    Removes any selected files from the Library and _**<ins>deletes them from the disk!</ins>**_
 2. **Library Collections**  
-  Toggles showing the Library Collections instead of Library files.
+    Toggles showing the Library Collections instead of Library files.
 3. **Filter**  
-  Opens the [Filter Library Tracks](#filter-library-tracks) dialog. 
+    Opens the [Filter Library Tracks](#filter-library-tracks) dialog. 
 4. **Library Folders**  
-  Shows the [Library Folders](#library-folders-window) management window.  
-  There is a drop-down menu when we click the arrow next to the button.  
-  This **Library Folders Menu** has shortcuts to the **Add Folder** and **ReScan Folders** buttons.
+    Shows the [Library Folders](#library-folders-window) management window.  
+    There is a drop-down menu when we click the arrow next to the button.  
+    This **Library Folders Menu** has shortcuts to the **Add Folder** and **ReScan Folders** buttons.
 
 # Detailed info
 
@@ -222,8 +225,7 @@ The Playlist panel is the main part of the Player.
 We can drag audio files or playlists here or use the **Find** button to search YouTube or our Collections for tracks.  
 The loaded Tracks can be used for Playback, get Converted to various formats, saved as a playlist, etc.  
 
-![PlayerView.png](images/PlayerView.png)
-
+![PlayerView.png](images/PlayerView.png)   
 The buttons that we find under the Playlist are:
 
 - **Repeat** - makes the player start from the beginning when the last Track is played out. 
@@ -258,8 +260,7 @@ The DJ controls are:
 
 #### Preview - Cue dialog
 
-![Preview.png](images/Preview.png)
-
+![Preview.png](images/Preview.png)   
 This dialog lets us preview/listen to the next track, before we do a crossfade.  
 This is a different player than the one that plays the track, so it can be paused, stopped, etc.  
 It plays whatever track we select from the Playlist or Library.  
@@ -305,32 +306,34 @@ Can be in one of the three modes of visualization:
 
 * **Spectrum Analyzer**  
   This is the default one, and it shows the frequency spectrum of the currently playing track.  
-![VizAnalyzer.png](images/VizAnalyzer.png)  
+  ![VizAnalyzer.png](images/VizAnalyzer.png)  
 * **Oscilloscope**  
   This shows the waveform of the currently playing track.  
-![VizOsc.png](images/VizOsc.png)  
+  ![VizOsc.png](images/VizOsc.png)  
 * **Spectrogram**  
   This shows the frequency spectrum of the currently playing track too, but also shows the time axis.  
-![VizSpec.png](images/VizSpec.png)  
+  ![VizSpec.png](images/VizSpec.png)  
 * **Peak Meter**  
   This shows the level of the currently playing track.  
-![VizPeak.png](images/VizPeak.png)  
+  ![VizPeak.png](images/VizPeak.png)  
 
 Clicking on the Visualizer will advance to the next type, while right-clicking will open the [Visualization menu](#visualization-menu).
 
 ### Transport
 
-![Transport.png](images/Transport.png)
-
+![Transport.png](images/Transport.png)  
 Mostly, self-explanatory playback controls: 
 
 - **Position bar** - Shows the position of the currently playing Track and lets us jump to a specific point. 
 - **Waveform** - Optical representation of the audio track that also lets us jump to a specific point.
 - **Previous Track** - Go to/Play the previous Track.
 - **Stop** - Stop playback.
-  Holding `Alt` when clicking, will fade out the track while holding `Shift` when clicking, will stop the playback when the track ends and will select the next one.
+  - Right clicking or holding `Alt` when left clicking, will fade out the track.
+  - Middle click or holding `Shift` when left clicking, will stop the playback when the track ends and will select the next one.
 - **Play/Pause** - Toggles Play/Pause. 
-- **Next Track** - Go to/Play the next Track. 
+  - Right clicking will pause the current track with a fade out.
+- **Next Track** - Go to/Play the next track. 
+  - Right clicking will crossfade to the next track
 - **Tap Tempo** - Opens the Tap Tempo dialog that lets you manually measure the BPM of the Track and add it to its metadata. 
 - **Time Display** - Shows one of a variety of times, that can be selected either by the menu that opens when right-clicking, or by cycle through with left-clicking on it:
   - Time Elapsed 
@@ -343,8 +346,7 @@ Mostly, self-explanatory playback controls:
 
 ### Compact View
 
-![CompactViewDetails.png](images/CompactViewDetails.png)
-
+![CompactViewDetails.png](images/CompactViewDetails.png)  
 This is a minimal view of the app, that consists of only a small, resizable Main window, that shows mostly the Cover Art of the currently playing (or selected) track, the [Visualizer](#visualizer) and the [Transport](#transport) that controls the playback.  
 
 Above the Transport, there is the title of the currently selected/playing Track and two extra buttons that open/close the Playlist and Properties windows.  
@@ -361,9 +363,9 @@ Additionaly, the Playlist window have a **DJ** button to open the [DJ panel](#dj
 
 When showing **Library Collections**, every row consists of the Collection's name, number of tracks, custom tags, total duration etc.  
 
-![CollectionTypes.png](images/CollectionTypes.png)  
-
+![CollectionTypes.png](images/CollectionTypes.png)    
 There are three types of Collections
+
 - YouTube Collections that use YouTube Playlist address url
 - Spotify Collections that can use a Spotify Playlist, Album or Podcast list address url
 - Custom Collections that can contain any number of local/YouTube tracks and don't use any address url
@@ -396,8 +398,7 @@ They can also be played back, but to have them advance automatically (like a lis
 
 A dialog to select the conversion settings.  
 
- ![Convert.png](images/Convert.png)
-
+ ![Convert.png](images/Convert.png)  
 The usual workflow of a convertion, is to uncompress the files to `.wav` file format, and then re-encode them with the selected encoder.  
 
 Besides the main settings for the encoders, like the _Compression Type_ and the _Quality Control_ of the conversion, there are a few more settings:
@@ -436,8 +437,7 @@ The **Reset All** button restore the default settings of the dialog.
 
 ### Edit Metadata
 
-  ![MetaEdit.png](images/MetaEdit.png)
-
+  ![MetaEdit.png](images/MetaEdit.png)  
 This dialog lets us edit all the track's metadata and also change its filename.  
 
 We can **Copy** and **Paste** metadata (including the Cover image).  
@@ -457,8 +457,7 @@ All the changes that are made in this dialog are not written to the file until e
 
 ### Multi Edit Metadata
 
-  ![MetaEditMulti.png](images/MetaEditMulti.png)
-
+  ![MetaEditMulti.png](images/MetaEditMulti.png)  
 Opens the dialog to change the metadata from all the selected files at once.  
 Only the checked (enabled) entries will affect the files.  
 If there is no value in a checked (enabled) entry, the respective metadata will be erased.  
@@ -502,8 +501,7 @@ will show us all the Pink Floyd tracks from their "Animals" album.
 
 ### Library Folders window
 
-![FolderManager.png](images/FolderManager.png)
-
+![FolderManager.png](images/FolderManager.png)  
 Manage the Library Folders that contain all the Library Tracks.  
 Here we can:
 
@@ -526,7 +524,7 @@ There are five pages in the Preferences dialog:
 
 #### General
 
-![Prefs1.png](images/Prefs1.png)
+![Prefs1.png](images/Prefs1.png) 
 
 - **Language**  
   Select the program's language.
@@ -581,11 +579,10 @@ There are five pages in the Preferences dialog:
 
 #### View
 
-![Prefs2.png](images/Prefs2.png)
-
+![Prefs2.png](images/Prefs2.png)   
 **Theme**  
-Select between Light, Dark and Custom themes.  
-The custom theme accepts a `.qss` (a Qt flavored `.css`) file.  
+Select between Light, Dark 1, Dark 2, Dark 3 and Custom themes.  
+The **custom** theme accepts a `.qss` (a Qt flavored `.css`) file.  
 These files can also be fast previewed, by drag and drop to the main window (when the Preferences dialog is closed). 
 
 **Playlist view**  
@@ -634,7 +631,7 @@ We can change the font and position of the subtitle text (for video files that h
 
 #### YouTube Settings
 
-![Prefs3.png](images/Prefs3.png)
+![Prefs3.png](images/Prefs3.png) 
 
 -   **Audio stream**  
     The YouTube's audio stream that will be used for the conversion.
@@ -658,60 +655,58 @@ We can change the font and position of the subtitle text (for video files that h
 
 #### Paths
 
-![Prefs4.png](images/Prefs4.png)
-
+![Prefs4.png](images/Prefs4.png)   
 Here we select the paths to the executables that the app uses to
+
 - Convert audio files (like FFMPEG, LAME, OGG, OPUS and NeroAAC)
 - Externally edit a track (four different choices)
 - File manager to handle the file links (if not the default Windows Explorer)
 
 #### Advanced
 
-![Prefs5.png](images/Prefs5.png)
+![Prefs5.png](images/Prefs5.png)   
 
-**No relative paths in Playlists**  
-The Playlists can have both absolute and relative paths.  
-The relative paths work only if the position of the playlist remain in the same relation with the position of the files, as it was originally saved.  
-So if both are moved and keep their position relation the playlist will work.  
-To move only the playlist and not the files, all the paths must be absolute.
+**No relative paths in Playlists**   
+  The Playlists can have both absolute and relative paths.   
+  The relative paths work only if the position of the playlist remain in the same relation with the position of the files, as it was originally saved.  
+  So if both are moved and keep their position relation the playlist will work.  
+  To move only the playlist and not the files, all the paths must be absolute.
 
-**Fast loading for Playlist tracks if more than**  
-Fast load tracks using the basic properties and get the rest of the info when possible.
+**Fast loading for Playlist tracks if more than**   
+  Fast load tracks using the basic properties and get the rest of the info when possible.
 
 **Prompt to send log after crash**  
-If the program crashes, it will ask if we want to send the crash log to the developer for debugging. 
+  If the program crashes, it will ask if we want to send the crash log to the developer for debugging. 
 
 **Use natural sorting for Library paths**  
-Normal (alphabetical) sorting gets "Track 11" before "Track 2" but is ~15% faster.  
-Natural sorting, sorts numbers in paths as expected (e.g. X1, X2, X11).
+  Normal (alphabetical) sorting gets "Track 11" before "Track 2" but is ~15% faster.  
+  Natural sorting, sorts numbers in paths as expected (e.g. X1, X2, X11).
 
 **Use global hotkeys**  
-Control the playback even when KataLib's window is in the background.  
-Pressing the **Change** button opens a dialog that let us select which keyboard combination will do what action.  
-For the default settings check the [Shortcuts](#shortcuts) section at the end.
-
+  Control the playback even when KataLib's window is in the background.  
+  Pressing the **Change** button opens a dialog that let us select which keyboard combination will do what action.  
+  For the default settings check the [Shortcuts](#shortcuts) section at the end.
 
 **DataBase**
 
-- **Backup db**  
-  Backup the database file for safety.
-- **Restore db**  
-  Restore the database from a safety copy.
-- **Compact db**  
-  Compact the database file to save some space.
+  - **Backup db** - Backup the database file for safety.
+  - **Restore db** - Restore the database from a safety copy.
+  - **Compact db - Compact the database file to save some space.
 
 **Multi-Processing**
+  - **Threads - The threads (or cores) that the program will use to do parallel processing of multiple tasks.
+    
+  - **Automatically select - The program will select the number of threads based on the number of physical cores of the processor.
 
-- **Threads**  
-  The threads (or cores) that the program will use to do parallel processing of multiple tasks.
-- **Automatically select**  
-  The program will select the number of threads based on the number of physical cores of the processor.
+**Buffer size for playback**  
+  Increase if the audio gets dropouts when the system's processing is high.  
+  The default value is 300ms.
 
 ### About
 
 Info about the program in five pages:
 
-![About.png](images/About.png)
+![About.png](images/About.png) 
 
 - Information about KataLib.
 - The User Guide.
@@ -727,8 +722,7 @@ ___
 In this dialog we can choose to Truncate the start and/or end of the selected track, or Split it into multiple different tracks.  
 We use numbered fields to do this and the **Preview** button lets us audition the results of our changes. 
 
-![SplitTrack.png](images/SplitTrack.png)
-
+![SplitTrack.png](images/SplitTrack.png)   
 When we first open this dialog, it contains only one slice with its start time (which is also the start of the track), and a second time, the time for the **(End of the track)**.  
 The default values for these are 00:00:00 for the start, and the track's duration for the end.  
 Changing these will truncate the start/end of the track.  
@@ -753,8 +747,7 @@ Dropping a `*.cue` or `*.txt` file on the dialog will import the times as well.
 
 ### Rename
 
-![Rename.png](images/Rename.png)
-
+![Rename.png](images/Rename.png)   
 This dialog lets us rename the selected file(s) using a pattern with variables.  
 The variables are:  
 
@@ -773,10 +766,23 @@ Example: {7} {2}\\{0} - {1}
 
 Produces: ..\\1998 NYC Live\\Portishead - Sour Times.mp3
 
+### Lossless Edit
+
+![LosslessEdit](images\LosslessEdit.png)   
+Here we can trim the silence and/or change the level of the selected tracks, without losing any audio quality (lossless).  
+
+- **Level**  
+  Adjust the volume of audio files so they all play at a specific loudness, reflecting how loud a song _actually_ feels to the human ear), using a statistical analysis called ReplayGain. Level changes can be done only to mp3, m4a and aac files. 
+  - **Average Level** This is the target loudness that the program will try to achieve.  
+    The default value is -16 LUFS.
+- **Trim**  
+  Remove any silence exist at the beginning or ending of a file.  
+
+We can toggle all the Level/Trim checkboxes, by clicking the **Level/Trim** checkbox at the lower part of the dialog.
+
 ### DropZone
 
-![DropZone.png](images/DropZone.png)
-
+![DropZone.png](images/DropZone.png)   
 The DropZone is this square image that is always on top of all the other windows.  
 You can drop YouTube urls from your browser to open them in KataLib, without the need to leave your browser and switch to KataLib.  
 
@@ -786,8 +792,7 @@ There are also some useful actions, that are available from a [menu](#dropzone-m
 
 ### Visualization Video Setup
 
-![VideoSetup.png](images/VizVideoSetup.png)
-
+![VideoSetup.png](images/VizVideoSetup.png)   
 The first thing that we can select is the video's resolution.  
 We can customize what the video is going to display by selecting which of metadata we want to include and which of the visualization widgets we want to show in the video.  
 We can also choose what font we want to use.  
@@ -938,9 +943,7 @@ These options are enabled/disabled depending on the type of the selection.
 
 ### Visualization menu
 
-![MenuVisualization.png](images/MenuVisualization.png)
-
-
+![MenuVisualization.png](images/MenuVisualization.png)  
 Here we select between the four modes of the [Visualizer](#visualizer)
 
 - **Spectrum Analyzer**
@@ -948,11 +951,12 @@ Here we select between the four modes of the [Visualizer](#visualizer)
 - **Spectrogram**
 - **Peak Meter**
 - **None** (Totally hides the visualization). 
- 
+
 There is also the option to **Show the Waveform** (or not), under the Position bar of the [Transport](#transport).  
 
 The **Settings** sub-menu contains the following options:
 
+- The **Visualization Size** menu, let us customize the size of the visualization widgets, that might help in the case of different Windows scaling. It has the sizes of 50%, 100%, 125%, 150%, 200% and 300%.
 - The **Visualization Color** menu, let us customize the color of the visualization widgets, or return to the defaults.
 - The **Spectrum Analyzer** menu, let customize the Spectrum Analyzer. It has 3 sub-menus:
   - The **Number of Bars** sub-menu, that let us select the number of bars that will be used from the Spectrum Analyzer. The default is 32, but we can select a value between 24, 32, 40, 48 and 56.
@@ -988,8 +992,7 @@ Right-clicking on the [Compact View](#compact-view)'s Cover Art will produce thi
 
 ### DropZone menu
 
-![MenuDropZone.png](images/MenuDropZone.png)
-
+![MenuDropZone.png](images/MenuDropZone.png)  
 This is the menu that you get if you right-click on DropZone.
 
 - **Paste from clipboard** searches the system's clipboard for any YouTube url and adds it to KataLib. 
@@ -1065,13 +1068,22 @@ ___
 | DJ show/hide               | Alt+D         |
 | Preview how/hide           | Ctrl+SpaceBar |
 
-   
+| **File Actions** |           |
+|------------------|-----------|
+| Copy files       | Alt+V     |
+| Move files       | Alt+B     |
+| Rename files     | Alt+N     |
+| Lossless edit    | Alt+E     |
+| Delete files     | Shift+Del |
+
+
+
 **Hotkeys (Global Shortcuts)**
 
 These are disabled by default.  
 To enable them go to `Preferences > Advanced > Use global hotkeys`  
 These default assignments can be changed by the user.  
- 
+
 
 | Global Shortcuts | Hotkeys    |
 |------------------|------------|
